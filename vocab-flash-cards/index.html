@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GL 11+ Vocabulary Flashcards — Community Tuition Aylesbury</title>
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #1a3a6e 0%, #2c5530 100%); min-height: 100vh; padding: 15px; }
+        .container { max-width: 500px; margin: 0 auto; }
+        .header { text-align: center; color: white; margin-bottom: 15px; }
+        .header h1 { font-size: 1.4rem; margin-bottom: 4px; }
+        .header p { font-size: 0.75rem; opacity: 0.9; }
+        .set-selector { text-align: center; margin-bottom: 15px; }
+        .set-selector select { padding: 10px 16px; font-size: 1rem; border-radius: 8px; border: none; background: white; color: #1a3a6e; font-weight: bold; cursor: pointer; min-width: 280px; }
+        .controls { display: flex; justify-content: center; gap: 8px; margin-bottom: 15px; flex-wrap: wrap; }
+        .controls button { padding: 8px 14px; font-size: 0.9rem; border: none; border-radius: 8px; cursor: pointer; background: rgba(255,255,255,0.2); color: white; font-weight: bold; }
+        .controls button:hover { background: rgba(255,255,255,0.35); }
+        .card-container { perspective: 1000px; width: 100%; max-width: 380px; height: 420px; margin: 0 auto; }
+        .card { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform 0.6s ease; cursor: pointer; }
+        .card.flipped { transform: rotateY(180deg); }
+        .card-face { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 16px; padding: 18px; display: flex; flex-direction: column; justify-content: center; align-items: center; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .card-front { background: linear-gradient(145deg, #ffffff 0%, #f5f5f5 100%); color: #1a3a6e; }
+        .card-front .word { font-size: 1.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; text-align: center; }
+        .card-front .tap-hint { margin-top: 30px; font-size: 0.8rem; color: #888; }
+        .card-back { background: linear-gradient(145deg, #f0f4ff 0%, #e8efff 100%); color: #1a3a6e; transform: rotateY(180deg); justify-content: flex-start; align-items: flex-start; padding: 14px 18px; overflow-y: auto; }
+        .card-back .label { font-size: 0.65rem; font-weight: 700; color: #2c5530; text-transform: uppercase; letter-spacing: 1px; margin-top: 10px; }
+        .card-back .label:first-child { margin-top: 0; }
+        .card-back .content { font-size: 0.85rem; line-height: 1.4; }
+        .card-back .example { font-style: italic; color: #2c5530; padding-left: 10px; border-left: 3px solid #2c5530; margin-top: 10px; }
+        .progress { text-align: center; color: white; margin-top: 15px; font-size: 0.8rem; }
+        .nav-buttons { display: flex; justify-content: center; gap: 10px; margin-top: 12px; }
+        .nav-buttons button { min-width: 90px; padding: 10px 16px; font-size: 0.9rem; border: none; border-radius: 8px; cursor: pointer; background: #f0a500; color: white; font-weight: bold; }
+        .nav-buttons button:hover { background: #d48f00; }
+        .nav-buttons button:disabled { background: #666; cursor: not-allowed; }
+        .set-info { text-align: center; color: rgba(255,255,255,0.85); font-size: 0.75rem; margin-top: 12px; }
+        .upload-section { background: rgba(255,255,255,0.1); border: 2px dashed rgba(255,255,255,0.4); border-radius: 12px; padding: 20px; text-align: center; color: white; margin-bottom: 15px; }
+        .upload-section.hidden { display: none; }
+        .upload-section input { display: none; }
+        .upload-section button { background: #f0a500; color: white; padding: 10px 20px; font-size: 0.9rem; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; margin-top: 10px; }
+        .loading { text-align: center; color: white; padding: 40px; display: none; }
+        .data-container { display: none; }
+        @media (max-width: 420px) { .card-container { height: 380px; } .card-front .word { font-size: 1.5rem; } .set-selector select { min-width: 100%; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>GL 11+ Vocabulary Flashcards</h1>
+            <p>Community Tuition Aylesbury</p>
+        </div>
+
+        <div class="upload-section" id="uploadSection">
+            <h3>Upload Your Vocabulary File</h3>
+            <p style="font-size:0.8rem;margin-top:8px;opacity:0.9">Drop Vocabulary_Smart_Mixed.xlsx here</p>
+            <input type="file" id="fileInput" accept=".xlsx,.xls">
+            <button onclick="document.getElementById('fileInput').click()">Choose File</button>
+        </div>
+
+        <div class="loading" id="loading">Loading flashcards...</div>
+
+        <div class="data-container" id="dataContainer">
+            <div class="set-selector">
+                <select id="setSelect" onchange="selectSet()"></select>
+            </div>
+
+            <div class="controls">
+                <button onclick="shuffleSet()">Shuffle</button>
+                <button onclick="resetSet()">Reset</button>
+                <button onclick="allCardsView()">All Cards</button>
+            </div>
+
+            <div class="card-container">
+                <div class="card" id="flashcard" onclick="flipCard()">
+                    <div class="card-face card-front">
+                        <div class="word" id="cardWord">LOADING...</div>
+                        <div class="tap-hint">Tap to flip</div>
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="label">Meaning</div>
+                        <div class="content" id="cardMeaning"></div>
+                        <div class="label">Synonyms</div>
+                        <div class="content" id="cardSynonyms"></div>
+                        <div class="label">Antonyms</div>
+                        <div class="content" id="cardAntonyms"></div>
+                        <div class="label">Example</div>
+                        <div class="content example" id="cardExample"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="progress" id="progress">Loading...</div>
+            <div class="nav-buttons">
+                <button onclick="prevCard()" id="prevBtn">Previous</button>
+                <button onclick="nextCard()" id="nextBtn">Next</button>
+            </div>
+            <div class="set-info" id="setInfo"></div>
+        </div>
+    </div>
+
+    <script>
+        const COL_MAP = {
+            "Meaning childfriendly": "meaning", "Meaning child-friendly": "meaning", "Meaning": "meaning",
+            "Synonyms 23": "synonyms", "Synonyms 2-3": "synonyms", "Synonyms": "synonyms",
+            "Antonyms 12": "antonyms", "Antonyms 1-2": "antonyms", "Antonyms": "antonyms",
+            "Example sentence": "example", "Example": "example",
+            "Word": "word"
+        };
+
+        let allSets = {};
+        let currentSet = null;
+        let currentSetName = null;
+        let currentIndex = 0;
+        let originalData = null;
+        let showAllMode = false;
+
+        document.getElementById('fileInput').addEventListener('change', handleFileSelect);
+
+        function handleFileSelect(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+            loadExcelFile(file);
+        }
+
+        function loadExcelFile(file) {
+            document.getElementById('uploadSection').classList.add('hidden');
+            document.getElementById('loading').style.display = 'block';
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const data = new Uint8Array(e.target.result);
+                const workbook = XLSX.read(data, { type: 'array' });
+
+                workbook.SheetNames.forEach(sheetName => {
+                    const worksheet = workbook.Sheets[sheetName];
+                    const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+
+                    if (jsonData.length < 2) return;
+
+                    const headers = jsonData[0];
+                    const colMap = {};
+                    headers.forEach((h, i) => {
+                        if (COL_MAP[h]) colMap[COL_MAP[h]] = i;
+                    });
+
+                    const cards = [];
+                    for (let i = 1; i < jsonData.length; i++) {
+                        const row = jsonData[i];
+                        if (!row[colMap.word] || row[colMap.word].toString().trim() === '') continue;
+                        cards.push({
+                            word: (row[colMap.word] || '').toString().trim(),
+                            meaning: (row[colMap.meaning] || '').toString().trim(),
+                            synonyms: (row[colMap.synonyms] || '').toString().trim(),
+                            antonyms: (row[colMap.antonyms] || '').toString().trim(),
+                            example: (row[colMap.example] || '').toString().trim()
+                        });
+                    }
+
+                    if (cards.length > 0) {
+                        allSets[sheetName] = cards;
+                    }
+                });
+
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('dataContainer').style.display = 'block';
+
+                const setSelect = document.getElementById('setSelect');
+                Object.keys(allSets).forEach(name => {
+                    const opt = document.createElement('option');
+                    opt.value = name;
+                    opt.textContent = name;
+                    setSelect.appendChild(opt);
+                });
+
+                selectSet();
+            };
+            reader.readAsArrayBuffer(file);
+        }
+
+        function selectSet() {
+            currentSetName = document.getElementById('setSelect').value;
+            currentSet = [...allSets[currentSetName]];
+            originalData = [...currentSet];
+            currentIndex = 0;
+            showAllMode = false;
+            updateCard();
+        }
+
+        function updateCard() {
+            const card = document.getElementById('flashcard');
+            card.classList.remove('flipped');
+            setTimeout(() => {
+                const item = currentSet[currentIndex];
+                document.getElementById('cardWord').textContent = item.word.toUpperCase();
+                document.getElementById('cardMeaning').textContent = item.meaning || '—';
+                document.getElementById('cardSynonyms').textContent = item.synonyms || '—';
+                document.getElementById('cardAntonyms').textContent = item.antonyms || '—';
+                document.getElementById('cardExample').textContent = item.example || '—';
+                document.getElementById('progress').textContent = `Card ${currentIndex + 1} of ${currentSet.length}`;
+                document.getElementById('setInfo').textContent = `Community Tuition Aylesbury • ${currentSetName}`;
+                document.getElementById('prevBtn').disabled = currentIndex === 0;
+                document.getElementById('nextBtn').disabled = currentIndex === currentSet.length - 1;
+            }, 150);
+        }
+
+        function flipCard() { document.getElementById('flashcard').classList.toggle('flipped'); }
+        function nextCard() { if (currentIndex < currentSet.length - 1) { currentIndex++; updateCard(); } }
+        function prevCard() { if (currentIndex > 0) { currentIndex--; updateCard(); } }
+
+        function shuffleSet() {
+            for (let i = currentSet.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [currentSet[i], currentSet[j]] = [currentSet[j], currentSet[i]];
+            }
+            currentIndex = 0;
+            updateCard();
+        }
+
+        function resetSet() { currentSet = [...originalData]; currentIndex = 0; updateCard(); }
+
+        function allCardsView() {
+            if (!showAllMode) {
+                const list = document.createElement('div');
+                list.id = 'allCardsList';
+                list.style.cssText = 'background:white;border-radius:12px;padding:15px;margin-top:15px;max-height:300px;overflow-y:auto;font-size:0.8rem;';
+                currentSet.forEach((item, i) => {
+                    const div = document.createElement('div');
+                    div.style.cssText = 'padding:8px;border-bottom:1px solid #eee;cursor:pointer;';
+                    div.innerHTML = `<strong>${item.word}</strong> — ${item.meaning.substring(0, 60)}${item.meaning.length > 60 ? '...' : ''}`;
+                    div.onclick = () => { currentIndex = i; updateCard(); document.getElementById('allCardsList').remove(); showAllMode = false; };
+                    list.appendChild(div);
+                });
+                document.getElementById('dataContainer').appendChild(list);
+                showAllMode = true;
+            } else {
+                document.getElementById('allCardsList').remove();
+                showAllMode = false;
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextCard();
+            if (e.key === 'ArrowLeft') prevCard();
+            if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); flipCard(); }
+        });
+    </script>
+</body>
+</html>
