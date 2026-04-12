@@ -16,6 +16,8 @@ body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a3a6e
 .controls{display:flex;justify-content:center;gap:8px;margin-bottom:15px;flex-wrap:wrap}
 .controls button{padding:8px 14px;font-size:0.9rem;border:none;border-radius:8px;cursor:pointer;background:rgba(255,255,255,0.2);color:white;font-weight:bold}
 .controls button:hover{background:rgba(255,255,255,0.35)}
+.home-btn{background:#2c5530!important}
+.home-btn:hover{background:#3d6f42!important}
 .card-container{perspective:1000px;width:100%;max-width:380px;height:420px;margin:0 auto}
 .card{width:100%;height:100%;position:relative;transform-style:preserve-3d;transition:transform 0.6s;cursor:pointer}
 .card.flipped{transform:rotateY(180deg)}
@@ -34,6 +36,9 @@ body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a3a6e
 .nav-buttons button:hover{background:#d48f00}
 .nav-buttons button:disabled{background:#666;cursor:not-allowed}
 .set-info{text-align:center;color:rgba(255,255,255,0.85);font-size:0.75rem;margin-top:12px}
+.copyright{text-align:center;color:rgba(255,255,255,0.5);font-size:0.65rem;margin-top:15px;padding-bottom:10px}
+.copyright a{color:rgba(255,255,255,0.7);text-decoration:none}
+.copyright a:hover{text-decoration:underline}
 .loading{text-align:center;color:white;padding:60px 20px;font-size:1rem}
 .error{text-align:center;color:#ffcccc;padding:40px;background:rgba(255,0,0,0.1);border-radius:12px;margin-top:20px;font-size:0.9rem;display:none}
 .data-container{display:none}
@@ -42,24 +47,37 @@ body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a3a6e
 </head>
 <body>
 <div class="container">
-<div class="header"><h1>GL 11+ Vocabulary Flashcards</h1><p>Community Tuition Aylesbury</p></div>
+<div class="header">
+<h1>GL 11+ Vocabulary Flashcards</h1>
+<p>Community Tuition Aylesbury</p>
+</div>
 <div class="loading" id="loading">Loading flashcards...</div>
 <div class="error" id="error"></div>
 <div class="data-container" id="dataContainer">
-<div class="set-selector"><select id="setSelect" onchange="selectSet()"></select></div>
+<div class="set-selector">
+<select id="setSelect" onchange="selectSet()"></select>
+</div>
 <div class="controls">
+<a href="../index.html" class="home-btn" style="padding:8px 14px;font-size:0.9rem;border:none;border-radius:8px;cursor:pointer;background:#2c5530;color:white;font-weight:bold;text-decoration:none;display:inline-block;">Home</a>
 <button onclick="shuffleSet()">Shuffle</button>
 <button onclick="resetSet()">Reset</button>
 <button onclick="toggleAllCards()">All Cards</button>
 </div>
 <div class="card-container">
 <div class="card" id="flashcard" onclick="flipCard()">
-<div class="card-face card-front"><div class="word" id="cardWord">LOADING...</div><div class="tap-hint">Tap to flip</div></div>
+<div class="card-face card-front">
+<div class="word" id="cardWord">LOADING...</div>
+<div class="tap-hint">Tap to flip</div>
+</div>
 <div class="card-face card-back">
-<div class="label">Meaning</div><div class="content" id="cardMeaning"></div>
-<div class="label">Synonyms</div><div class="content" id="cardSynonyms"></div>
-<div class="label">Antonyms</div><div class="content" id="cardAntonyms"></div>
-<div class="label">Example</div><div class="content example" id="cardExample"></div>
+<div class="label">Meaning</div>
+<div class="content" id="cardMeaning"></div>
+<div class="label">Synonyms</div>
+<div class="content" id="cardSynonyms"></div>
+<div class="label">Antonyms</div>
+<div class="content" id="cardAntonyms"></div>
+<div class="label">Example</div>
+<div class="content example" id="cardExample"></div>
 </div>
 </div>
 </div>
@@ -69,6 +87,7 @@ body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a3a6e
 <button onclick="nextCard()" id="nextBtn">Next</button>
 </div>
 <div class="set-info" id="setInfo"></div>
+<div class="copyright">© 2026 Designed by Teknowlogia Lab, Kharadi Enterprise Ltd.</div>
 </div>
 </div>
 <script>
