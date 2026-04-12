@@ -90,7 +90,7 @@ document.getElementById('prevBtn').disabled=currentIndex===0;
 document.getElementById('nextBtn').disabled=currentIndex===currentSet.length-1;
 },150);}
 function flipCard(){document.getElementById('flashcard').classList.toggle('flipped');}
-function nextCard(){if(currentIndexurrentSet.length-1){currentIndex++;updateCard();}}
+function nextCard(){if(currentIndex<currentSet.length-1){currentIndex++;updateCard();}}
 function prevCard(){if(currentIndex>0){currentIndex--;updateCard();}}
 function shuffleSet(){for(let i=currentSet.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[currentSet[i],currentSet[j]]=[currentSet[j],currentSet[i]];}currentIndex=0;updateCard();}
 function resetSet(){currentSet=[...originalData];currentIndex=0;updateCard();}
