@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Tuition Aylesbury - Flash Cards</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .subtitle {
+            text-align: center;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.2rem;
+            margin-bottom: 50px;
+        }
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .card-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+        .card-desc {
+            font-size: 1rem;
+            color: #718096;
+            line-height: 1.6;
+        }
+        .card.vocab { border-top: 5px solid #48bb78; }
+        .card.maths { border-top: 5px solid #ed8936; }
+        .card.vr { border-top: 5px solid #4299e1; }
+        .card.nvr { border-top: 5px solid #ed64a6; }
+        .card.vocab .card-icon { color: #48bb78; }
+        .card.maths .card-icon { color: #ed8936; }
+        .card.vr .card-icon { color: #4299e1; }
+        .card.nvr .card-icon { color: #ed64a6; }
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            .subtitle { font-size: 1rem; }
+            .card-icon { font-size: 3rem; }
+            .card-title { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Community Tuition Aylesbury</h1>
+        <p class="subtitle">Interactive Flash Cards for 11+ Exam Preparation</p>
+        
+        <div class="cards-grid">
+            <a href="vocab-flash-cards/" class="card vocab">
+                <div class="card-icon">&#128218;</div>
+                <h2 class="card-title">Vocab Flash Cards</h2>
+                <p class="card-desc">Master essential vocabulary for the 11+ verbal reasoning section.</p>
+            </a>
+            
+            <a href="#" class="card maths">
+                <div class="card-icon">&#128290;</div>
+                <h2 class="card-title">Maths Flash Cards</h2>
+                <p class="card-desc">Practice key maths concepts and problem-solving techniques.</p>
+            </a>
+            
+            <a href="#" class="card vr">
+                <div class="card-icon">&#129488;</div>
+                <h2 class="card-title">VR Flash Cards</h2>
+                <p class="card-desc">Verbal Reasoning practice to boost logical thinking skills.</p>
+            </a>
+            
+            <a href="#" class="card nvr">
+                <div class="card-icon">&#128279;</div>
+                <h2 class="card-title">NVR Flash Cards</h2>
+                <p class="card-desc">Non-Verbal Reasoning patterns and visual puzzle challenges.</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
