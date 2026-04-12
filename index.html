@@ -83,7 +83,37 @@
             .card-icon { font-size: 3rem; }
             .card-title { font-size: 1.3rem; }
         }
-    </style>
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .controls {
+            margin-bottom: 20px;
+        }
+        .home-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .home-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        .copyright {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+        .copyright strong {
+            color: #fff;
+            font-weight: 700;
+        }    </style>
 </head>
 <body>
     <div class="container">
@@ -116,5 +146,15 @@
             </a>
         </div>
     </div>
-</body>
+
+
+        <footer>
+            <div class="controls">
+                <a href="index.html" class="home-btn">Home</a>
+            </div>
+            <div class="copyright">
+                Copyright designed by <strong>Teknowlogia Lab</strong>, a brand of Kharadi Enterprise Ltd.
+            </div>
+        </footer>
+    </body>
 </html>
