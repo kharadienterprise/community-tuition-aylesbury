@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GL 11+ Vocabulary Flashcards — Community Tuition Aylesbury</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a3a6e,#2c5530);min-height:100vh;padding:15px}
+.container{max-width:500px;margin:0 auto}
+.header{text-align:center;color:white;margin-bottom:15px}
+.header h1{font-size:1.4rem}
+.header p{font-size:0.75rem;opacity:0.9}
+.set-selector{text-align:center;margin-bottom:15px}
+.set-selector select{padding:10px 16px;font-size:1rem;border-radius:8px;border:none;background:white;color:#1a3a6e;font-weight:bold;min-width:280px}
+.controls{display:flex;justify-content:center;gap:8px;margin-bottom:15px;flex-wrap:wrap}
+.controls button{padding:8px 14px;font-size:0.9rem;border:none;border-radius:8px;cursor:pointer;background:rgba(255,255,255,0.2);color:white;font-weight:bold}
+.controls button:hover{background:rgba(255,255,255,0.35)}
+.card-container{perspective:1000px;width:100%;max-width:380px;height:420px;margin:0 auto}
+.card{width:100%;height:100%;position:relative;transform-style:preserve-3d;transition:transform 0.6s;cursor:pointer}
+.card.flipped{transform:rotateY(180deg)}
+.card-face{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:16px;padding:18px;display:flex;flex-direction:column;justify-content:center;align-items:center;box-shadow:0 10px 30px rgba(0,0,0,0.3)}
+.card-front{background:linear-gradient(145deg,#fff,#f5f5f5);color:#1a3a6e}
+.card-front .word{font-size:1.8rem;font-weight:800;text-transform:uppercase;letter-spacing:2px;text-align:center}
+.card-front .tap-hint{margin-top:30px;font-size:0.8rem;color:#888}
+.card-back{background:linear-gradient(145deg,#f0f4ff,#e8efff);color:#1a3a6e;transform:rotateY(180deg);justify-content:flex-start;align-items:flex-start;padding:14px 18px;overflow-y:auto}
+.card-back .label{font-size:0.65rem;font-weight:700;color:#2c5530;text-transform:uppercase;letter-spacing:1px;margin-top:10px}
+.card-back .label:first-child{margin-top:0}
+.card-back .content{font-size:0.85rem;line-height:1.4}
+.card-back .example{font-style:italic;color:#2c5530;padding-left:10px;border-left:3px solid #2c5530;margin-top:10px}
+.progress{text-align:center;color:white;margin-top:15px;font-size:0.8rem}
+.nav-buttons{display:flex;justify-content:center;gap:10px;margin-top:12px}
+.nav-buttons button{min-width:90px;padding:10px 16px;font-size:0.9rem;border:none;border-radius:8px;cursor:pointer;background:#f0a500;color:white;font-weight:bold}
+.nav-buttons button:hover{background:#d48f00}
+.nav-buttons button:disabled{background:#666;cursor:not-allowed}
+.set-info{text-align:center;color:rgba(255,255,255,0.85);font-size:0.75rem;margin-top:12px}
+.loading{text-align:center;color:white;padding:60px 20px;font-size:1rem}
+.error{text-align:center;color:#ffcccc;padding:40px;background:rgba(255,0,0,0.1);border-radius:12px;margin-top:20px;font-size:0.9rem;display:none}
+.data-container{display:none}
+@media(max-width:420px){.card-container{height:380px}.card-front .word{font-size:1.5rem}.set-selector select{min-width:100%}}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header"><h1>GL 11+ Vocabulary Flashcards</h1><p>Community Tuition Aylesbury</p></div>
+<div class="loading" id="loading">Loading flashcards...</div>
+<div class="error" id="error"></div>
+<div class="data-container" id="dataContainer">
+<div class="set-selector"><select id="setSelect" onchange="selectSet()"></select></div>
+<div class="controls">
+<button onclick="shuffleSet()">Shuffle</button>
+<button onclick="resetSet()">Reset</button>
+<button onclick="toggleAllCards()">All Cards</button>
+</div>
+<div class="card-container">
+<div class="card" id="flashcard" onclick="flipCard()">
+<div class="card-face card-front"><div class="word" id="cardWord">LOADING...</div><div class="tap-hint">Tap to flip</div></div>
+<div class="card-face card-back">
+<div class="label">Meaning</div><div class="content" id="cardMeaning"></div>
+<div class="label">Synonyms</div><div class="content" id="cardSynonyms"></div>
+<div class="label">Antonyms</div><div class="content" id="cardAntonyms"></div>
+<div class="label">Example</div><div class="content example" id="cardExample"></div>
+</div>
+</div>
+</div>
+<div class="progress" id="progress">Loading...</div>
+<div class="nav-buttons">
+<button onclick="prevCard()" id="prevBtn">Previous</button>
+<button onclick="nextCard()" id="nextBtn">Next</button>
+</div>
+<div class="set-info" id="setInfo"></div>
+</div>
+</div>
+<script>
+let allSets={},currentSet=null,currentSetName=null,currentIndex=0,originalData=null;
+fetch('vocab_data.json').then(r=>{if(!r.ok)throw new Error();return r.json();})
+.then(data=>{allSets=data;document.getElementById('loading').style.display='none';document.getElementById('dataContainer').style.display='block';
+const sel=document.getElementById('setSelect');Object.keys(allSets).sort().forEach(n=>{const o=document.createElement('option');o.value=n;o.textContent=n;sel.appendChild(o);});selectSet();})
+.catch(()=>{document.getElementById('loading').style.display='none';document.getElementById('error').textContent='Could not load vocab_data.json. Ensure it is in the same folder.';document.getElementById('error').style.display='block';});
+function selectSet(){currentSetName=document.getElementById('setSelect').value;currentSet=[...allSets[currentSetName]];originalData=[...currentSet];currentIndex=0;updateCard();}
+function updateCard(){const card=document.getElementById('flashcard');card.classList.remove('flipped');setTimeout(()=>{const i=currentSet[currentIndex];
+document.getElementById('cardWord').textContent=i.word.toUpperCase();
+document.getElementById('cardMeaning').textContent=i.meaning||'—';
+document.getElementById('cardSynonyms').textContent=i.synonyms||'—';
+document.getElementById('cardAntonyms').textContent=i.antonyms||'—';
+document.getElementById('cardExample').textContent=i.example||'—';
+document.getElementById('progress').textContent='Card '+(currentIndex+1)+' of '+currentSet.length;
+document.getElementById('setInfo').textContent='Community Tuition Aylesbury — '+currentSetName;
+document.getElementById('prevBtn').disabled=currentIndex===0;
+document.getElementById('nextBtn').disabled=currentIndex===currentSet.length-1;
+},150);}
+function flipCard(){document.getElementById('flashcard').classList.toggle('flipped');}
+function nextCard(){if(currentIndexurrentSet.length-1){currentIndex++;updateCard();}}
+function prevCard(){if(currentIndex>0){currentIndex--;updateCard();}}
+function shuffleSet(){for(let i=currentSet.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[currentSet[i],currentSet[j]]=[currentSet[j],currentSet[i]];}currentIndex=0;updateCard();}
+function resetSet(){currentSet=[...originalData];currentIndex=0;updateCard();}
+function toggleAllCards(){const ex=document.getElementById('allCardsList');if(ex){ex.remove();return;}const list=document.createElement('div');list.id='allCardsList';list.style.cssText='background:white;border-radius:12px;padding:15px;margin-top:15px;max-height:300px;overflow-y:auto;font-size:0.8rem;';
+currentSet.forEach((item,idx)=>{const d=document.createElement('div');d.style.cssText='padding:8px;border-bottom:1px solid #eee;cursor:pointer;';d.innerHTML='<strong>'+item.word+'</strong> — '+item.meaning.substring(0,55)+(item.meaning.length>55?'...':'');d.onclick=()=>{currentIndex=idx;updateCard();document.getElementById('allCardsList').remove();};list.appendChild(d);});document.getElementById('dataContainer').appendChild(list);}
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')nextCard();if(e.key==='ArrowLeft')prevCard();if(e.key===' '||e.key==='Enter'){e.preventDefault();flipCard();}});
+</script>
+</body>
+</html>
