@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "title": "Maths Flashcards – Algebra",
+    "description": "Interactive flashcards for algebra concepts, expressions, and equations",
+    "version": "1.0",
+    "author": "Kharadi Enterprise",
+    "created": "2026-04-14"
+  },
+  "deck": {
+    "id": "deck-algebra",
+    "name": "Algebra",
+    "cards": [
+      {"id": "alg-01", "question": "What is a variable in algebra?", "answer": "A letter or symbol that represents an unknown number or value"},
+      {"id": "alg-02", "question": "What is a constant in algebra?", "answer": "A fixed value that does not change, like a number"},
+      {"id": "alg-03", "question": "What is a coefficient?", "answer": "The number that multiplies a variable, e.g., 3 in 3x"},
+      {"id": "alg-04", "question": "What is a term in algebra?", "answer": "A single number, variable, or numbers and variables multiplied together"},
+      {"id": "alg-05", "question": "What is an expression?", "answer": "A combination of numbers, variables, and operations without an equals sign"},
+      {"id": "alg-06", "question": "What is an equation?", "answer": "A statement that two expressions are equal, containing an equals sign"},
+      {"id": "alg-07", "question": "How do you simplify 3x + 2x?", "answer": "5x"},
+      {"id": "alg-08", "question": "How do you expand 3(x + 4)?", "answer": "3x + 12"},
+      {"id": "alg-09", "question": "What is the formula for the nth term of an arithmetic sequence?", "answer": "a + (n - 1)d, where a is the first term and d is the common difference"},
+      {"id": "alg-10", "question": "How do you solve 2x + 5 = 15?", "answer": "Subtract 5 from both sides: 2x = 10, then divide by 2: x = 5"},
+      {"id": "alg-11", "question": "How do you solve 3(x - 2) = 12?", "answer": "Divide by 3: x - 2 = 4, then add 2: x = 6"},
+      {"id": "alg-12", "question": "What is factorising?", "answer": "Writing an expression as a product of its factors, e.g., 6x + 9 = 3(2x + 3)"},
+      {"id": "alg-13", "question": "What is the quadratic formula?", "answer": "x = (-b ± √(b² - 4ac)) / 2a"},
+      {"id": "alg-14", "question": "How do you factorise x² + 5x + 6?", "answer": "(x + 2)(x + 3)"},
+      {"id": "alg-15", "question": "What is the difference of two squares formula?", "answer": "a² - b² = (a + b)(a - b)"},
+      {"id": "alg-16", "question": "How do you expand (x + 3)²?", "answer": "x² + 6x + 9"},
+      {"id": "alg-17", "question": "How do you expand (x + 3)(x - 3)?", "answer": "x² - 9"},
+      {"id": "alg-18", "question": "What is an index or power?", "answer": "The small number that shows how many times to multiply a base number by itself"},
+      {"id": "alg-19", "question": "What is the rule for multiplying indices with the same base?", "answer": "Add the powers: a^m × a^n = a^(m+n)"},
+      {"id": "alg-20", "question": "What is the rule for dividing indices with the same base?", "answer": "Subtract the powers: a^m ÷ a^n = a^(m-n)"}
+    ]
+  }
+}
