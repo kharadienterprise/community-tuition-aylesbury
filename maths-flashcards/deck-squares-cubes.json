@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Maths Flashcards - Squares and Cubes",
-    "description": "Interactive flashcards for perfect squares and cubes",
-    "version": "1.0",
+    "title": "Maths Flashcards – Squares and Cubes",
+    "description": "Interactive flashcards for perfect squares, cubes, and square roots with visual patterns",
+    "version": "1.1",
     "author": "Kharadi Enterprise",
     "created": "2026-04-14"
   },
@@ -10,26 +10,206 @@
     "id": "deck-squares-cubes",
     "name": "Squares and Cubes",
     "cards": [
-      {"id": "sc-01", "question": "What is 1 squared?", "answer": "1", "tags": ["squares"]},
-      {"id": "sc-02", "question": "What is 2 squared?", "answer": "4", "tags": ["squares"]},
-      {"id": "sc-03", "question": "What is 3 squared?", "answer": "9", "tags": ["squares"]},
-      {"id": "sc-04", "question": "What is 4 squared?", "answer": "16", "tags": ["squares"]},
-      {"id": "sc-05", "question": "What is 5 squared?", "answer": "25", "tags": ["squares"]},
-      {"id": "sc-06", "question": "What is 6 squared?", "answer": "36", "tags": ["squares"]},
-      {"id": "sc-07", "question": "What is 7 squared?", "answer": "49", "tags": ["squares"]},
-      {"id": "sc-08", "question": "What is 8 squared?", "answer": "64", "tags": ["squares"]},
-      {"id": "sc-09", "question": "What is 9 squared?", "answer": "81", "tags": ["squares"]},
-      {"id": "sc-10", "question": "What is 10 squared?", "answer": "100", "tags": ["squares"]},
-      {"id": "sc-11", "question": "What is 11 squared?", "answer": "121", "tags": ["squares"]},
-      {"id": "sc-12", "question": "What is 12 squared?", "answer": "144", "tags": ["squares"]},
-      {"id": "sc-13", "question": "What is 1 cubed?", "answer": "1", "tags": ["cubes"]},
-      {"id": "sc-14", "question": "What is 2 cubed?", "answer": "8", "tags": ["cubes"]},
-      {"id": "sc-15", "question": "What is 3 cubed?", "answer": "27", "tags": ["cubes"]},
-      {"id": "sc-16", "question": "What is 4 cubed?", "answer": "64", "tags": ["cubes"]},
-      {"id": "sc-17", "question": "What is 5 cubed?", "answer": "125", "tags": ["cubes"]},
-      {"id": "sc-18", "question": "What is 10 cubed?", "answer": "1000", "tags": ["cubes"]},
-      {"id": "sc-19", "question": "What is the square root of 16?", "answer": "4", "tags": ["square root"]},
-      {"id": "sc-20", "question": "What is the square root of 25?", "answer": "5", "tags": ["square root"]}
+      {
+        "id": "sc-01",
+        "question": "What is 1 squared?",
+        "answer": "1² = 1 × 1 = 1. Visual: A 1×1 square has area 1. The first square number."
+      },
+      {
+        "id": "sc-02",
+        "question": "What is 2 squared?",
+        "answer": "2² = 2 × 2 = 4. Visual: A 2×2 square has area 4. The second square number."
+      },
+      {
+        "id": "sc-03",
+        "question": "What is 3 squared?",
+        "answer": "3² = 3 × 3 = 9. Visual: A 3×3 square has area 9. The third square number."
+      },
+      {
+        "id": "sc-04",
+        "question": "What is 4 squared?",
+        "answer": "4² = 4 × 4 = 16. Visual: A 4×4 square has area 16. This is also 2⁴ (2 to the power of 4)."
+      },
+      {
+        "id": "sc-05",
+        "question": "What is 5 squared?",
+        "answer": "5² = 5 × 5 = 25. Visual: A 5×5 square has area 25. This is the square on a standard dice."
+      },
+      {
+        "id": "sc-06",
+        "question": "What is 6 squared?",
+        "answer": "6² = 6 × 6 = 36. Visual: A 6×6 square has area 36. There are 360 degrees in a circle, close to this."
+      },
+      {
+        "id": "sc-07",
+        "question": "What is 7 squared?",
+        "answer": "7² = 7 × 7 = 49. Visual: A 7×7 square has area 49. There are 49 days in 7 weeks."
+      },
+      {
+        "id": "sc-08",
+        "question": "What is 8 squared?",
+        "answer": "8² = 8 × 8 = 64. Visual: A 8×8 chessboard has 64 squares. This is also 2⁶ (2 to the power of 6)."
+      },
+      {
+        "id": "sc-09",
+        "question": "What is 9 squared?",
+        "answer": "9² = 9 × 9 = 81. Visual: A 9×9 square has area 81. Note: 8 + 1 = 9, so the digits of 81 add to 9."
+      },
+      {
+        "id": "sc-10",
+        "question": "What is 10 squared?",
+        "answer": "10² = 10 × 10 = 100. Visual: A 10×10 square has area 100. This is the base of our number system."
+      },
+      {
+        "id": "sc-11",
+        "question": "What is 11 squared?",
+        "answer": "11² = 11 × 11 = 121. Trick: For 11, the digits go 1, then 1+1=2, then 1, giving 121. This is a palindrome."
+      },
+      {
+        "id": "sc-12",
+        "question": "What is 12 squared?",
+        "answer": "12² = 12 × 12 = 144. Visual: A 12×12 square has area 144. There are 144 square inches in 1 square foot."
+      },
+      {
+        "id": "sc-13",
+        "question": "What is 1 cubed?",
+        "answer": "1³ = 1 × 1 × 1 = 1. Visual: A 1×1×1 cube has volume 1. The first cube number."
+      },
+      {
+        "id": "sc-14",
+        "question": "What is 2 cubed?",
+        "answer": "2³ = 2 × 2 × 2 = 8. Visual: A 2×2×2 cube has volume 8. There are 8 bits in a byte."
+      },
+      {
+        "id": "sc-15",
+        "question": "What is 3 cubed?",
+        "answer": "3³ = 3 × 3 × 3 = 27. Visual: A 3×3×3 cube has volume 27. A standard Rubik's cube is 3×3×3."
+      },
+      {
+        "id": "sc-16",
+        "question": "What is 4 cubed?",
+        "answer": "4³ = 4 × 4 × 4 = 64. Visual: A 4×4×4 cube has volume 64. Note: 64 is both 8² and 4³."
+      },
+      {
+        "id": "sc-17",
+        "question": "What is 5 cubed?",
+        "answer": "5³ = 5 × 5 × 5 = 125. Visual: A 5×5×5 cube has volume 125. 125 ml is a standard small drink size."
+      },
+      {
+        "id": "sc-18",
+        "question": "What is 6 cubed?",
+        "answer": "6³ = 6 × 6 × 6 = 216. Visual: A 6×6×6 cube has volume 216. There are 216 squares on a standard 6×6 dice grid."
+      },
+      {
+        "id": "sc-19",
+        "question": "What is 7 cubed?",
+        "answer": "7³ = 7 × 7 × 7 = 343. Visual: A 7×7×7 cube has volume 343. This is 7³, a power of a prime number."
+      },
+      {
+        "id": "sc-20",
+        "question": "What is 8 cubed?",
+        "answer": "8³ = 8 × 8 × 8 = 512. Visual: A 8×8×8 cube has volume 512. 512 MB is a common memory size."
+      },
+      {
+        "id": "sc-21",
+        "question": "What is 9 cubed?",
+        "answer": "9³ = 9 × 9 × 9 = 729. Visual: A 9×9×9 cube has volume 729. Note: 7 + 2 + 9 = 18, and 1 + 8 = 9."
+      },
+      {
+        "id": "sc-22",
+        "question": "What is 10 cubed?",
+        "answer": "10³ = 10 × 10 × 10 = 1000. Visual: A 10×10×10 cube has volume 1000. 1000 ml = 1 litre = 1 kg of water."
+      },
+      {
+        "id": "sc-23",
+        "question": "What is the square root of 16?",
+        "answer": "√16 = 4, because 4 × 4 = 16. The square root undoes squaring."
+      },
+      {
+        "id": "sc-24",
+        "question": "What is the square root of 25?",
+        "answer": "√25 = 5, because 5 × 5 = 25. The square root undoes squaring."
+      },
+      {
+        "id": "sc-25",
+        "question": "What is the square root of 36?",
+        "answer": "√36 = 6, because 6 × 6 = 36. This is the reverse of squaring 6."
+      },
+      {
+        "id": "sc-26",
+        "question": "What is the square root of 49?",
+        "answer": "√49 = 7, because 7 × 7 = 49. Remember: 7×7=49 is a key square to memorise."
+      },
+      {
+        "id": "sc-27",
+        "question": "What is the square root of 64?",
+        "answer": "√64 = 8, because 8 × 8 = 64. A chessboard has 64 squares arranged in an 8×8 grid."
+      },
+      {
+        "id": "sc-28",
+        "question": "What is the square root of 81?",
+        "answer": "√81 = 9, because 9 × 9 = 81. The digits of 81 (8+1=9) relate to the answer."
+      },
+      {
+        "id": "sc-29",
+        "question": "What is the square root of 100?",
+        "answer": "√100 = 10, because 10 × 10 = 100. The square root of 100 is exactly 10."
+      },
+      {
+        "id": "sc-30",
+        "question": "What is the cube root of 8?",
+        "answer": "³√8 = 2, because 2 × 2 × 2 = 8. The cube root undoes cubing."
+      },
+      {
+        "id": "sc-31",
+        "question": "What is the cube root of 27?",
+        "answer": "³√27 = 3, because 3 × 3 × 3 = 27. A standard Rubik's cube is 3³."
+      },
+      {
+        "id": "sc-32",
+        "question": "What is the cube root of 64?",
+        "answer": "³√64 = 4, because 4 × 4 × 4 = 64. Note: 64 is both 8² and 4³."
+      },
+      {
+        "id": "sc-33",
+        "question": "What is the cube root of 125?",
+        "answer": "³√125 = 5, because 5 × 5 × 5 = 125. This is the volume of a 5×5×5 cube."
+      },
+      {
+        "id": "sc-34",
+        "question": "What is the cube root of 1000?",
+        "answer": "³√1000 = 10, because 10 × 10 × 10 = 1000. 1000 ml = 1 litre."
+      },
+      {
+        "id": "sc-35",
+        "question": "How do you square a number?",
+        "answer": "To square a number, multiply it by itself. Example: 7² = 7 × 7 = 49. Written as n² or n^2."
+      },
+      {
+        "id": "sc-36",
+        "question": "How do you cube a number?",
+        "answer": "To cube a number, multiply it by itself three times. Example: 4³ = 4 × 4 × 4 = 64. Written as n³ or n^3."
+      },
+      {
+        "id": "sc-37",
+        "question": "What is the pattern in square numbers?",
+        "answer": "Square numbers increase by consecutive odd numbers: 1, 4, 9, 16, 25, 36... The gaps are +3, +5, +7, +9, +11... (odd numbers)."
+      },
+      {
+        "id": "sc-38",
+        "question": "What is the difference between squaring and cubing?",
+        "answer": "Squaring: multiply by itself once (n² = n×n), gives area of a square. Cubing: multiply by itself twice more (n³ = n×n×n), gives volume of a cube."
+      },
+      {
+        "id": "sc-39",
+        "question": "What is a perfect square?",
+        "answer": "A perfect square is a number that is the square of a whole number. Examples: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144."
+      },
+      {
+        "id": "sc-40",
+        "question": "What is a perfect cube?",
+        "answer": "A perfect cube is a number that is the cube of a whole number. Examples: 1, 8, 27, 64, 125, 216, 343, 512, 729, 1000."
+      }
     ]
   }
 }
