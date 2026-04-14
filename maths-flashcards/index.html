@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11+ Maths Flashcards — Community Tuition Aylesbury</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #ed8936, #c05621); min-height: 100vh; padding: 15px; }
+    .container { max-width: 500px; margin: 0 auto; }
+    .header { text-align: center; color: white; margin-bottom: 15px; }
+    .header h1 { font-size: 1.4rem; }
+    .header p { font-size: 0.75rem; opacity: 0.9; }
+    .deck-selector { text-align: center; margin-bottom: 15px; }
+    .deck-selector select { padding: 10px 16px; font-size: 1rem; border-radius: 8px; border: none; background: white; color: #c05621; font-weight: bold; min-width: 280px; }
+    .controls { display: flex; justify-content: center; gap: 8px; margin-bottom: 15px; flex-wrap: wrap; }
+    .controls button { padding: 8px 14px; font-size: 0.9rem; border: none; border-radius: 8px; cursor: pointer; background: rgba(255,255,255,0.2); color: white; font-weight: bold; }
+    .controls button:hover { background: rgba(255,255,255,0.35); }
+    .home-btn { background: #c05621 !important; }
+    .home-btn:hover { background: #d66d2e !important; }
+    .card-container { perspective: 1000px; width: 100%; max-width: 420px; height: 460px; margin: 0 auto; }
+    .card { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform 0.6s; cursor: pointer; }
+    .card.flipped { transform: rotateY(180deg); }
+    .card-face { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 16px; padding: 18px; display: flex; flex-direction: column; justify-content: center; align-items: center; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+    .card-front { background: linear-gradient(145deg, #fff, #f5f5f5); color: #c05621; }
+    .card-front .question { font-size: 1.3rem; font-weight: 700; text-align: center; line-height: 1.4; }
+    .card-front .tap-hint { margin-top: 30px; font-size: 0.8rem; color: #888; }
+    .card-back { background: linear-gradient(145deg, #fff7ed, #fed7aa); color: #c05621; transform: rotateY(180deg); justify-content: flex-start; align-items: flex-start; padding: 14px 18px; overflow-y: auto; }
+    .card-back .label { font-size: 0.65rem; font-weight: 700; color: #9a3412; text-transform: uppercase; letter-spacing: 1px; margin-top: 10px; }
+    .card-back .label:first-child { margin-top: 0; }
+    .card-back .content { font-size: 1rem; line-height: 1.5; }
+    .progress { text-align: center; color: white; margin-top: 15px; font-size: 0.8rem; }
+    .nav-buttons { display: flex; justify-content: center; gap: 10px; margin-top: 12px; }
+    .nav-buttons button { min-width: 90px; padding: 10px 16px; font-size: 0.9rem; border: none; border-radius: 8px; cursor: pointer; background: #f0a500; color: white; font-weight: bold; }
+    .nav-buttons button:hover { background: #d48f00; }
+    .nav-buttons button:disabled { background: #666; cursor: not-allowed; }
+    .deck-info { text-align: center; color: rgba(255,255,255,0.85); font-size: 0.75rem; margin-top: 12px; }
+    .copyright { text-align: center; color: rgba(255,255,255,0.5); font-size: 0.65rem; margin-top: 15px; padding-bottom: 10px; }
+    .copyright a { color: rgba(255,255,255,0.7); text-decoration: none; }
+    .copyright a:hover { text-decoration: underline; }
+    .loading { text-align: center; color: white; padding: 60px 20px; font-size: 1rem; }
+    .error { text-align: center; color: #ffcccc; padding: 40px; background: rgba(255,0,0,0.1); border-radius: 12px; margin-top: 20px; font-size: 0.9rem; display: none; }
+    .data-container { display: none; }
+    @media (max-width: 420px) {
+      .card-container { height: 400px; }
+      .card-front .question { font-size: 1.1rem; }
+      .deck-selector select { min-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>11+ Maths Flashcards</h1>
+      <p>Community Tuition Aylesbury</p>
+    </div>
+    <div class="loading" id="loading">Loading flashcards...</div>
+    <div class="error" id="error"></div>
+    <div class="data-container" id="dataContainer">
+      <div class="deck-selector">
+        <select id="deckSelect" onchange="selectDeck()"></select>
+      </div>
+      <div class="controls">
+        <a href="../index.html" class="home-btn" style="padding:8px 14px;font-size:0.9rem;border:none;border-radius:8px;cursor:pointer;background:#c05621;color:white;font-weight:bold;text-decoration:none;display:inline-block;">Home</a>
+        <button onclick="shuffleDeck()">Shuffle</button>
+        <button onclick="resetDeck()">Reset</button>
+        <button onclick="toggleAllCards()">All Cards</button>
+      </div>
+      <div class="card-container">
+        <div class="card" id="flashcard" onclick="flipCard()">
+          <div class="card-face card-front">
+            <div class="question" id="cardQuestion">LOADING...</div>
+            <div class="tap-hint">Tap to flip</div>
+          </div>
+          <div class="card-face card-back">
+            <div class="label">Answer</div>
+            <div class="content" id="cardAnswer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="progress" id="progress">Loading...</div>
+      <div class="nav-buttons">
+        <button onclick="prevCard()" id="prevBtn">Previous</button>
+        <button onclick="nextCard()" id="nextBtn">Next</button>
+      </div>
+      <div class="deck-info" id="deckInfo"></div>
+      <div class="copyright">© 2026 Kharadi Enterprise Ltd. (Teknowlogia Lab)</div>
+    </div>
+  </div>
+  <script>
+    let allDecks = {}, currentDeck = null, currentDeckName = null, currentIndex = 0, originalData = null;
+
+    const deckFiles = [
+      { file: 'deck-algebra.json', name: 'Algebra' },
+      { file: 'deck-definitions-1.json', name: 'Definitions 1' },
+      { file: 'deck-definitions-2.json', name: 'Definitions 2' },
+      { file: 'deck-fractions-fdp.json', name: 'Fractions, Decimals & Percentages' },
+      { file: 'deck-measures-units.json', name: 'Measures & Units' },
+      { file: 'deck-ratio-percentage.json', name: 'Ratio & Percentage' },
+      { file: 'deck-squares-cubes.json', name: 'Squares & Cubes' },
+      { file: 'deck-times-tables.jsontables.json', name: 'Times Tables 0–12' }
+    ];
+
+    let loadedCount = 0;
+
+    function loadAllDecks() {
+      deckFiles.forEach(deck => {
+        fetch(deck.file)
+          .then(r => { if (!r.ok) throw new Error(); return r.json(); })
+          .then(data => {
+            allDecks[deck.name] = data;
+            loadedCount++;
+            if (loadedCount === deckFiles.length) {
+              document.getElementById('loading').style.display = 'none';
+              document.getElementById('dataContainer').style.display = 'block';
+              const sel = document.getElementById('deckSelect');
+              Object.keys(allDecks).sort().forEach(n => {
+                const o = document.createElement('option');
+                o.value = n;
+                o.textContent = n;
+                sel.appendChild(o);
+              });
+              selectDeck();
+            }
+          })
+          .catch(err => {
+            loadedCount++;
+            if (loadedCount === deckFiles.length) {
+              document.getElementById('loading').style.display = 'none';
+              if (Object.keys(allDecks).length === 0) {
+                document.getElementById('error').textContent = 'Could not load any deck files. Ensure all JSON files are in the same folder.';
+                document.getElementById('error').style.display = 'block';
+              } else {
+                document.getElementById('dataContainer').style.display = 'block';
+                const sel = document.getElementById('deckSelect');
+                Object.keys(allDecks).sort().forEach(n => {
+                  const o = document.createElement('option');
+                  o.value = n;
+                  o.textContent = n;
+                  sel.appendChild(o);
+                });
+                selectDeck();
+              }
+            }
+          });
+      });
+    }
+
+    function selectDeck() {
+      currentDeckName = document.getElementById('deckSelect').value;
+      const deckData = allDecks[currentDeckName];
+      currentDeck = [...deckData.deck.cards];
+      originalData = [...currentDeck];
+      currentIndex = 0;
+      updateCard();
+    }
+
+    function updateCard() {
+      const card = document.getElementById('flashcard');
+      card.classList.remove('flipped');
+      setTimeout(() => {
+        const i = currentDeck[currentIndex];
+        document.getElementById('cardQuestion').textContent = i.question;
+        document.getElementById('cardAnswer').textContent = i.answer || '—';
+        document.getElementById('progress').textContent = 'Card ' + (currentIndex + 1) + ' of ' + currentDeck.length;
+        document.getElementById('deckInfo').textContent = 'Community Tuition Aylesbury — ' + currentDeckName;
+        document.getElementById('prevBtn').disabled = currentIndex === 0;
+        document.getElementById('nextBtn').disabled = currentIndex === currentDeck.length - 1;
+      }, 150);
+    }
+
+    function flipCard() {
+      document.getElementById('flashcard').classList.toggle('flipped');
+    }
+
+    function nextCard() {
+      if (currentIndex < currentDeck.length - 1) {
+        currentIndex++;
+        updateCard();
+      }
+    }
+
+    function prevCard() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateCard();
+      }
+    }
+
+    function shuffleDeck() {
+      for (let i = currentDeck.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [currentDeck[i], currentDeck[j]] = [currentDeck[j], currentDeck[i]];
+      }
+      currentIndex = 0;
+      updateCard();
+    }
+
+    function resetDeck() {
+      currentDeck = [...originalData];
+      currentIndex = 0;
+      updateCard();
+    }
+
+    function toggleAllCards() {
+      const ex = document.getElementById('allCardsList');
+      if (ex) { ex.remove(); return; }
+      const list = document.createElement('div');
+      list.id = 'allCardsList';
+      list.style.cssText = 'background:white;border-radius:12px;padding:15px;margin-top:15px;max-height:300px;overflow-y:auto;font-size:0.8rem;';
+      currentDeck.forEach((item, idx) => {
+        const d = document.createElement('div');
+        d.style.cssText = 'padding:8px;border-bottom:1px solid #eee;cursor:pointer;';
+        d.innerHTML = '<strong>' + item.question.substring(0, 50) + (item.question.length > 50 ? '...' : '') + '</strong> — ' + (item.answer ? item.answer.substring(0, 40) : '') + (item.answer && item.answer.length > 40 ? '...' : '');
+        d.onclick = () => {
+          currentIndex = idx;
+          updateCard();
+          document.getElementById('allCardsList').remove();
+        };
+        list.appendChild(d);
+      });
+      document.getElementById('dataContainer').appendChild(list);
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') nextCard();
+      if (e.key === 'ArrowLeft') prevCard();
+      if (e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault();
+        flipCard();
+      }
+    });
+
+    loadAllDecks();
+  </script>
+</body>
+</html>
