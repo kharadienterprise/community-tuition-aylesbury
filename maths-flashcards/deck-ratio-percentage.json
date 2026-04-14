@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "title": "Maths Flashcards – Ratio and Percentage",
+    "description": "Interactive flashcards for ratio, proportion, and percentage problems",
+    "version": "1.0",
+    "author": "Kharadi Enterprise",
+    "created": "2026-04-14"
+  },
+  "deck": {
+    "id": "deck-ratio-percentage",
+    "name": "Ratio and Percentage",
+    "cards": [
+      {"id": "rp-01", "question": "What is a ratio?", "answer": "A comparison of two or more numbers, written as a:b or a/b"},
+      {"id": "rp-02", "question": "How do you simplify a ratio?", "answer": "Divide both parts of the ratio by their highest common factor"},
+      {"id": "rp-03", "question": "What does a percentage mean?", "answer": "A number out of 100, written with the % symbol"},
+      {"id": "rp-04", "question": "How do you convert a fraction to a percentage?", "answer": "Divide the numerator by the denominator and multiply by 100"},
+      {"id": "rp-05", "question": "How do you convert a decimal to a percentage?", "answer": "Multiply the decimal by 100 and add the % symbol"},
+      {"id": "rp-06", "question": "How do you convert a percentage to a decimal?", "answer": "Divide the percentage by 100"},
+      {"id": "rp-07", "question": "How do you find a percentage of a quantity?", "answer": "Multiply the quantity by the percentage divided by 100"},
+      {"id": "rp-08", "question": "What is 25% as a fraction?", "answer": "1/4"},
+      {"id": "rp-09", "question": "What is 50% as a fraction?", "answer": "1/2"},
+      {"id": "rp-10", "question": "What is 75% as a fraction?", "answer": "3/4"},
+      {"id": "rp-11", "question": "How do you increase a number by a percentage?", "answer": "Multiply the number by (1 + percentage/100)"},
+      {"id": "rp-12", "question": "How do you decrease a number by a percentage?", "answer": "Multiply the number by (1 - percentage/100)"},
+      {"id": "rp-13", "question": "What is a proportion?", "answer": "A statement that two ratios are equal"},
+      {"id": "rp-14", "question": "How do you divide a quantity in a given ratio?", "answer": "Add the parts, divide the total by this sum, then multiply by each part"},
+      {"id": "rp-15", "question": "What is direct proportion?", "answer": "When two quantities increase or decrease at the same rate"},
+      {"id": "rp-16", "question": "What is inverse proportion?", "answer": "When one quantity increases as the other decreases at the same rate"},
+      {"id": "rp-17", "question": "How do you find the percentage change?", "answer": "(Change / Original) × 100"},
+      {"id": "rp-18", "question": "What is 1/5 as a percentage?", "answer": "20%"},
+      {"id": "rp-19", "question": "What is 1/10 as a percentage?", "answer": "10%"},
+      {"id": "rp-20", "question": "What is 2/5 as a percentage?", "answer": "40%"}
+    ]
+  }
+}
