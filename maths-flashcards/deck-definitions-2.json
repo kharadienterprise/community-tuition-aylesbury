@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "title": "Maths Flashcards – Definitions Part 2",
+    "description": "Interactive flashcards for key mathematical definitions and terminology (Part 2)",
+    "version": "1.0",
+    "author": "Kharadi Enterprise",
+    "created": "2026-04-14"
+  },
+  "deck": {
+    "id": "deck-definitions-2",
+    "name": "Definitions (Part 2)",
+    "cards": [
+      {"id": "def-21", "question": "What is a reflex angle?", "answer": "An angle that measures more than 180 degrees but less than 360 degrees"},
+      {"id": "def-22", "question": "What is a full rotation?", "answer": "An angle of exactly 360 degrees"},
+      {"id": "def-23", "question": "What are complementary angles?", "answer": "Two angles whose sum is 90 degrees"},
+      {"id": "def-24", "question": "What are supplementary angles?", "answer": "Two angles whose sum is 180 degrees"},
+      {"id": "def-25", "question": "What are vertically opposite angles?", "answer": "Angles formed when two lines intersect, opposite each other and equal in measure"},
+      {"id": "def-26", "question": "What are corresponding angles?", "answer": "Angles in matching positions when a transversal crosses parallel lines; they are equal"},
+      {"id": "def-27", "question": "What are alternate angles?", "answer": "Angles formed on opposite sides of a transversal between parallel lines; they are equal"},
+      {"id": "def-28", "question": "What are co-interior angles?", "answer": "Angles on the same side of a transversal between parallel lines; they add up to 180 degrees"},
+      {"id": "def-29", "question": "What is the sum of angles in a triangle?", "answer": "180 degrees"},
+      {"id": "def-30", "question": "What is the sum of angles in a quadrilateral?", "answer": "360 degrees"},
+      {"id": "def-31", "question": "What is the sum of exterior angles of any polygon?", "answer": "360 degrees"},
+      {"id": "def-32", "question": "What is the formula for the sum of interior angles of an n-sided polygon?", "answer": "(n - 2) × 180 degrees"},
+      {"id": "def-33", "question": "What is an equilateral triangle?", "answer": "A triangle with all three sides equal and all angles equal to 60 degrees"},
+      {"id": "def-34", "question": "What is an isosceles triangle?", "answer": "A triangle with two equal sides and two equal angles"},
+      {"id": "def-35", "question": "What is a scalene triangle?", "answer": "A triangle with all three sides of different lengths and all three angles different"},
+      {"id": "def-36", "question": "What is the Pythagoras theorem?", "answer": "In a right-angled triangle, a² + b² = c², where c is the hypotenuse"},
+      {"id": "def-37", "question": "What is the circumference of a circle?", "answer": "The distance around a circle, calculated as 2πr or πd"},
+      {"id": "def-38", "question": "What is the area of a circle?", "answer": "π × r²"},
+      {"id": "def-39", "question": "What is the perimeter of a rectangle?", "answer": "2 × (length + width)"},
+      {"id": "def-40", "question": "What is the area of a rectangle?", "answer": "length × width"}
+    ]
+  }
+}
