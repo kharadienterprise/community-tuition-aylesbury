@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Maths Flashcards - Definitions Part 1",
+    "title": "Maths Flashcards – Definitions Part 1",
     "description": "Interactive flashcards for key mathematical definitions and terminology",
-    "version": "1.0",
+    "version": "1.1",
     "author": "Kharadi Enterprise",
     "created": "2026-04-14"
   },
@@ -10,26 +10,26 @@
     "id": "deck-definitions-1",
     "name": "Definitions (Part 1)",
     "cards": [
-      {"id": "def-01", "question": "What is an integer?", "answer": "A whole number, which can be positive, negative, or zero", "tags": ["definitions", "numbers"]},
-      {"id": "def-02", "question": "What is a prime number?", "answer": "A natural number greater than 1 that has no positive divisors other than 1 and itself", "tags": ["definitions", "numbers"]},
-      {"id": "def-03", "question": "What is a composite number?", "answer": "A positive integer which is not prime and not 1 (has more than two factors)", "tags": ["definitions", "numbers"]},
-      {"id": "def-04", "question": "What is a factor?", "answer": "A number that divides exactly into another number with no remainder", "tags": ["definitions", "numbers"]},
-      {"id": "def-05", "question": "What is a multiple?", "answer": "A number that is produced by multiplying a given number by an integer", "tags": ["definitions", "numbers"]},
-      {"id": "def-06", "question": "What is the HCF?", "answer": "Highest Common Factor - the largest number that divides exactly into two or more numbers", "tags": ["definitions", "numbers"]},
-      {"id": "def-07", "question": "What is the LCM?", "answer": "Lowest Common Multiple - the smallest number that is a multiple of two or more numbers", "tags": ["definitions", "numbers"]},
-      {"id": "def-08", "question": "What is a rational number?", "answer": "A number that can be expressed as a fraction of two integers", "tags": ["definitions", "numbers"]},
-      {"id": "def-09", "question": "What is an irrational number?", "answer": "A real number that cannot be expressed as a simple fraction; its decimal expansion is non-terminating and non-repeating", "tags": ["definitions", "numbers"]},
-      {"id": "def-10", "question": "What is a real number?", "answer": "Any number on the number line, including rational and irrational numbers", "tags": ["definitions", "numbers"]},
-      {"id": "def-11", "question": "What is the mean?", "answer": "The average of a set of numbers; calculated by dividing the sum by the count", "tags": ["definitions", "statistics"]},
-      {"id": "def-12", "question": "What is the median?", "answer": "The middle value when numbers are arranged in order", "tags": ["definitions", "statistics"]},
-      {"id": "def-13", "question": "What is the mode?", "answer": "The value that appears most frequently in a set of data", "tags": ["definitions", "statistics"]},
-      {"id": "def-14", "question": "What is the range?", "answer": "The difference between the highest and lowest values in a set of data", "tags": ["definitions", "statistics"]},
-      {"id": "def-15", "question": "What is the probability?", "answer": "The likelihood of an event occurring, expressed as a number between 0 and 1", "tags": ["definitions", "probability"]},
-      {"id": "def-16", "question": "What is an angle?", "answer": "The amount of turn between two rays or lines that meet at a point", "tags": ["definitions", "geometry"]},
-      {"id": "def-17", "question": "What is a right angle?", "answer": "An angle of exactly 90 degrees", "tags": ["definitions", "geometry"]},
-      {"id": "def-18", "question": "What is an acute angle?", "answer": "An angle that measures less than 90 degrees", "tags": ["definitions", "geometry"]},
-      {"id": "def-19", "question": "What is an obtuse angle?", "answer": "An angle that measures between 90 and 180 degrees", "tags": ["definitions", "geometry"]},
-      {"id": "def-20", "question": "What is a straight angle?", "answer": "An angle that measures exactly 180 degrees", "tags": ["definitions", "geometry"]}
+      {"id": "def-01", "question": "What is an integer?", "answer": "A whole number, which can be positive, negative, or zero. Examples: -5, 0, 7, 100. Numbers like 3.5 or 1/2 are NOT integers.", "tags": ["definitions", "numbers"]},
+      {"id": "def-02", "question": "What is a prime number?", "answer": "A natural number greater than 1 that has no positive divisors other than 1 and itself. Examples: 2, 3, 5, 7, 11, 13, 17, 19. Note: 2 is the only even prime number.", "tags": ["definitions", "numbers"]},
+      {"id": "def-03", "question": "What is a composite number?", "answer": "A positive integer which is not prime and not 1 (has more than two factors). Examples: 4 (factors: 1, 2, 4), 6 (factors: 1, 2, 3, 6), 8, 9, 10. The smallest composite number is 4.", "tags": ["definitions", "numbers"]},
+      {"id": "def-04", "question": "What is a factor?", "answer": "A number that divides exactly into another number with no remainder. Examples: The factors of 12 are 1, 2, 3, 4, 6, and 12. The factors of 15 are 1, 3, 5, and 15.", "tags": ["definitions", "numbers"]},
+      {"id": "def-05", "question": "What is a multiple?", "answer": "A number that is produced by multiplying a given number by an integer. Examples: Multiples of 5 are 5, 10, 15, 20, 25... Multiples of 3 are 3, 6, 9, 12, 15...", "tags": ["definitions", "numbers"]},
+      {"id": "def-06", "question": "What is the HCF?", "answer": "Highest Common Factor – the largest number that divides exactly into two or more numbers. Example: HCF of 12 and 18 is 6, because the common factors are 1, 2, 3, 6, and 6 is the largest. HCF of 8 and 20 is 4.", "tags": ["definitions", "numbers"]},
+      {"id": "def-07", "question": "What is the LCM?", "answer": "Lowest Common Multiple – the smallest number that is a multiple of two or more numbers. Example: LCM of 4 and 6 is 12, because multiples of 4 are 4, 8, 12, 16... and multiples of 6 are 6, 12, 18..., so 12 is the first common one. LCM of 3 and 5 is 15.", "tags": ["definitions", "numbers"]},
+      {"id": "def-08", "question": "What is a rational number?", "answer": "A number that can be expressed as a fraction of two integers. Examples: 1/2, 3/4, -5/7, 0.75 (which is 3/4), 0.333... (which is 1/3). All integers are rational (e.g., 5 = 5/1).", "tags": ["definitions", "numbers"]},
+      {"id": "def-09", "question": "What is an irrational number?", "answer": "A real number that cannot be expressed as a simple fraction; its decimal expansion is non-terminating and non-repeating. Examples: π (pi) = 3.14159..., √2 = 1.41421..., √3, √5. These decimals go on forever without a repeating pattern.", "tags": ["definitions", "numbers"]},
+      {"id": "def-10", "question": "What is a real number?", "answer": "Any number on the number line, including rational and irrational numbers. Examples: 5, -3.7, 0, 1/2, π, √2. Real numbers cover everything you can plot on a continuous number line.", "tags": ["definitions", "numbers"]},
+      {"id": "def-11", "question": "What is the mean?", "answer": "The average of a set of numbers; calculated by dividing the sum by the count. Example: Mean of 2, 4, 6 is (2+4+6)÷3 = 12÷3 = 4. Mean of 5, 10, 15, 20 is (5+10+15+20)÷4 = 50÷4 = 12.5.", "tags": ["definitions", "statistics"]},
+      {"id": "def-12", "question": "What is the median?", "answer": "The middle value when numbers are arranged in order. Example: For 2, 5, 8, 10, 15, the median is 8 (middle value). For an even set like 2, 5, 8, 10, the median is (5+8)÷2 = 6.5. Always sort the numbers first!", "tags": ["definitions", "statistics"]},
+      {"id": "def-13", "question": "What is the mode?", "answer": "The value that appears most frequently in a set of data. Example: In 2, 3, 3, 5, 7, the mode is 3. In 1, 1, 2, 2, 3, the modes are 1 and 2 (bimodal). In 1, 2, 3, 4, 5, there is no mode.", "tags": ["definitions", "statistics"]},
+      {"id": "def-14", "question": "What is the range?", "answer": "The difference between the highest and lowest values in a set of data. Example: Range of 3, 7, 12, 20 is 20 - 3 = 17. Range of 1, 5, 10, 15, 25 is 25 - 1 = 24. A larger range means more spread in the data.", "tags": ["definitions", "statistics"]},
+      {"id": "def-15", "question": "What is the probability?", "answer": "The likelihood of an event occurring, expressed as a number between 0 and 1. Examples: Probability of rolling a 3 on a die is 1/6. Probability of heads on a coin is 1/2 or 0.5. Probability 0 = impossible, 1 = certain.", "tags": ["definitions", "probability"]},
+      {"id": "def-16", "question": "What is an angle?", "answer": "The amount of turn between two rays or lines that meet at a point (called the vertex). Example: When clock hands are at 3 and 12, they form a 90° angle. When hands are at 12 and 6, they form a 180° straight angle.", "tags": ["definitions", "geometry"]},
+      {"id": "def-17", "question": "What is a right angle?", "answer": "An angle of exactly 90 degrees. Examples: The corner of a square or rectangle, the corner of a sheet of paper, the angle at 3 o'clock on a clock. Shown with a small square symbol in diagrams.", "tags": ["definitions", "geometry"]},
+      {"id": "def-18", "question": "What is an acute angle?", "answer": "An angle that measures less than 90 degrees. Examples: 30°, 45°, 60°, 89°. Think of the angle as 'sharp' or 'narrow'. The angle between clock hands at 1 and 2 is about 30°.", "tags": ["definitions", "geometry"]},
+      {"id": "def-19", "question": "What is an obtuse angle?", "answer": "An angle that measures between 90 and 180 degrees. Examples: 100°, 120°, 150°, 179°. Think of the angle as 'wide' or 'blunt'. The angle between clock hands at 2 and 8 is about 180° (almost).", "tags": ["definitions", "geometry"]},
+      {"id": "def-20", "question": "What is a straight angle?", "answer": "An angle that measures exactly 180 degrees. It looks like a straight line. Examples: The angle at 6 o'clock on a clock, two lines going in opposite directions from the same point.", "tags": ["definitions", "geometry"]}
     ]
   }
 }
