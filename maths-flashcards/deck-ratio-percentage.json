@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Maths Flashcards – Ratio and Percentage",
-    "description": "Interactive flashcards for ratio, proportion, and percentage problems",
-    "version": "1.0",
+    "description": "Interactive flashcards for ratio, proportion, and percentage problems with examples and visual guides",
+    "version": "1.1",
     "author": "Kharadi Enterprise",
     "created": "2026-04-14"
   },
@@ -10,26 +10,156 @@
     "id": "deck-ratio-percentage",
     "name": "Ratio and Percentage",
     "cards": [
-      {"id": "rp-01", "question": "What is a ratio?", "answer": "A comparison of two or more numbers, written as a:b or a/b"},
-      {"id": "rp-02", "question": "How do you simplify a ratio?", "answer": "Divide both parts of the ratio by their highest common factor"},
-      {"id": "rp-03", "question": "What does a percentage mean?", "answer": "A number out of 100, written with the % symbol"},
-      {"id": "rp-04", "question": "How do you convert a fraction to a percentage?", "answer": "Divide the numerator by the denominator and multiply by 100"},
-      {"id": "rp-05", "question": "How do you convert a decimal to a percentage?", "answer": "Multiply the decimal by 100 and add the % symbol"},
-      {"id": "rp-06", "question": "How do you convert a percentage to a decimal?", "answer": "Divide the percentage by 100"},
-      {"id": "rp-07", "question": "How do you find a percentage of a quantity?", "answer": "Multiply the quantity by the percentage divided by 100"},
-      {"id": "rp-08", "question": "What is 25% as a fraction?", "answer": "1/4"},
-      {"id": "rp-09", "question": "What is 50% as a fraction?", "answer": "1/2"},
-      {"id": "rp-10", "question": "What is 75% as a fraction?", "answer": "3/4"},
-      {"id": "rp-11", "question": "How do you increase a number by a percentage?", "answer": "Multiply the number by (1 + percentage/100)"},
-      {"id": "rp-12", "question": "How do you decrease a number by a percentage?", "answer": "Multiply the number by (1 - percentage/100)"},
-      {"id": "rp-13", "question": "What is a proportion?", "answer": "A statement that two ratios are equal"},
-      {"id": "rp-14", "question": "How do you divide a quantity in a given ratio?", "answer": "Add the parts, divide the total by this sum, then multiply by each part"},
-      {"id": "rp-15", "question": "What is direct proportion?", "answer": "When two quantities increase or decrease at the same rate"},
-      {"id": "rp-16", "question": "What is inverse proportion?", "answer": "When one quantity increases as the other decreases at the same rate"},
-      {"id": "rp-17", "question": "How do you find the percentage change?", "answer": "(Change / Original) × 100"},
-      {"id": "rp-18", "question": "What is 1/5 as a percentage?", "answer": "20%"},
-      {"id": "rp-19", "question": "What is 1/10 as a percentage?", "answer": "10%"},
-      {"id": "rp-20", "question": "What is 2/5 as a percentage?", "answer": "40%"}
+      {
+        "id": "rp-01",
+        "question": "What is a ratio?",
+        "answer": "A ratio compares two or more quantities. Written as a:b or a/b. Example: If there are 3 red balls and 5 blue balls, the ratio is 3:5."
+      },
+      {
+        "id": "rp-02",
+        "question": "How do you simplify a ratio?",
+        "answer": "Divide all parts of the ratio by their highest common factor (HCF). Example: 12:8 → HCF is 4 → 12÷4 : 8÷4 = 3:2."
+      },
+      {
+        "id": "rp-03",
+        "question": "What does a percentage mean?",
+        "answer": "A percentage means 'per hundred' – a number out of 100, written with the % symbol. Example: 45% = 45 out of 100 = 45/100 = 0.45."
+      },
+      {
+        "id": "rp-04",
+        "question": "How do you convert a fraction to a percentage?",
+        "answer": "Divide the numerator by the denominator, then multiply by 100. Example: 3/4 = 3÷4 = 0.75 → 0.75×100 = 75%."
+      },
+      {
+        "id": "rp-05",
+        "question": "How do you convert a decimal to a percentage?",
+        "answer": "Multiply the decimal by 100 and add the % symbol. Example: 0.65 × 100 = 65%. 2.5 × 100 = 250%."
+      },
+      {
+        "id": "rp-06",
+        "question": "How do you convert a percentage to a decimal?",
+        "answer": "Divide the percentage by 100. Example: 80% → 80÷100 = 0.8. 125% → 125÷100 = 1.25."
+      },
+      {
+        "id": "rp-07",
+        "question": "How do you find a percentage of a quantity?",
+        "answer": "Multiply the quantity by the percentage divided by 100. Example: 20% of £80 = (20÷100)×80 = 0.2×80 = £16."
+      },
+      {
+        "id": "rp-08",
+        "question": "What is 25% as a fraction?",
+        "answer": "25% = 25/100 = 1/4. Key fact: 25% is one quarter."
+      },
+      {
+        "id": "rp-09",
+        "question": "What is 50% as a fraction?",
+        "answer": "50% = 50/100 = 1/2. Key fact: 50% is one half."
+      },
+      {
+        "id": "rp-10",
+        "question": "What is 75% as a fraction?",
+        "answer": "75% = 75/100 = 3/4. Key fact: 75% is three quarters."
+      },
+      {
+        "id": "rp-11",
+        "question": "How do you increase a number by a percentage?",
+        "answer": "Multiply the number by (1 + percentage/100). Example: Increase £200 by 15% → £200 × 1.15 = £230."
+      },
+      {
+        "id": "rp-12",
+        "question": "How do you decrease a number by a percentage?",
+        "answer": "Multiply the number by (1 - percentage/100). Example: Decrease £200 by 15% → £200 × 0.85 = £170."
+      },
+      {
+        "id": "rp-13",
+        "question": "What is a proportion?",
+        "answer": "A proportion is a statement that two ratios are equal. Example: 2:3 = 4:6 because both simplify to the same ratio."
+      },
+      {
+        "id": "rp-14",
+        "question": "How do you divide a quantity in a given ratio?",
+        "answer": "1) Add the ratio parts. 2) Divide the total by the sum. 3) Multiply by each part. Example: Split £100 in ratio 3:2 → 3+2=5 → £100÷5=£20 → 3×£20=£60, 2×£20=£40."
+      },
+      {
+        "id": "rp-15",
+        "question": "What is direct proportion?",
+        "answer": "When two quantities increase or decrease at the same rate. Example: If 5 pens cost £3, then 10 pens cost £6. Formula: y = kx where k is constant."
+      },
+      {
+        "id": "rp-16",
+        "question": "What is inverse proportion?",
+        "answer": "When one quantity increases, the other decreases at the same rate. Example: 4 workers take 6 hours; 8 workers take 3 hours. Formula: y = k/x where k is constant."
+      },
+      {
+        "id": "rp-17",
+        "question": "How do you find the percentage change?",
+        "answer": "Percentage change = (Change ÷ Original) × 100. Example: Price rises from £50 to £60 → Change = £10 → (10÷50)×100 = 20% increase."
+      },
+      {
+        "id": "rp-18",
+        "question": "What is 1/5 as a percentage?",
+        "answer": "1/5 = 1÷5 = 0.2 → 0.2×100 = 20%. Key fact: 1/5 = 20%."
+      },
+      {
+        "id": "rp-19",
+        "question": "What is 1/10 as a percentage?",
+        "answer": "1/10 = 1÷10 = 0.1 → 0.1×100 = 10%. Key fact: 1/10 = 10%."
+      },
+      {
+        "id": "rp-20",
+        "question": "What is 2/5 as a percentage?",
+        "answer": "2/5 = 2÷5 = 0.4 → 0.4×100 = 40%. Key fact: 2/5 = 40%."
+      },
+      {
+        "id": "rp-21",
+        "question": "What is 3/5 as a percentage?",
+        "answer": "3/5 = 3÷5 = 0.6 → 0.6×100 = 60%. Key fact: 3/5 = 60%."
+      },
+      {
+        "id": "rp-22",
+        "question": "What is 4/5 as a percentage?",
+        "answer": "4/5 = 4÷5 = 0.8 → 0.8×100 = 80%. Key fact: 4/5 = 80%."
+      },
+      {
+        "id": "rp-23",
+        "question": "What is 1/8 as a percentage?",
+        "answer": "1/8 = 1÷8 = 0.125 → 0.125×100 = 12.5%. Key fact: 1/8 = 12.5%."
+      },
+      {
+        "id": "rp-24",
+        "question": "How do you calculate compound interest as a percentage?",
+        "answer": "Use the formula: A = P(1 + r/100)^t. Example: £1000 at 5% for 3 years → £1000 × (1.05)^3 = £1157.63."
+      },
+      {
+        "id": "rp-25",
+        "question": "How do you find the original amount before a percentage increase/decrease?",
+        "answer": "Divide the new amount by the multiplier. Example: A price increased by 20% to £120 → Original = £120 ÷ 1.20 = £100. Decreased by 20% to £80 → Original = £80 ÷ 0.80 = £100."
+      },
+      {
+        "id": "rp-26",
+        "question": "What is a percentage profit or loss?",
+        "answer": "Profit/Loss % = ((Selling Price - Cost Price) ÷ Cost Price) × 100. Example: Buy for £50, sell for £65 → Profit = £15 → (15÷50)×100 = 30% profit."
+      },
+      {
+        "id": "rp-27",
+        "question": "How do you share an amount in a ratio (visual method)?",
+        "answer": "Draw a bar divided into equal parts. For ratio 2:3 with £50: draw 5 equal parts (2+3), each part = £50÷5 = £10, so shares are £20 and £30."
+      },
+      {
+        "id": "rp-28",
+        "question": "What is a scale ratio or map scale?",
+        "answer": "A scale ratio shows the relationship between a map/drawing and real life. Example: Scale 1:10000 means 1cm on map = 10000cm (100m) in real life."
+      },
+      {
+        "id": "rp-29",
+        "question": "How do you use the unitary method for ratio problems?",
+        "answer": "Find the value of one unit first, then multiply. Example: 8 pens cost £4 → 1 pen = £4÷8 = £0.50 → 15 pens = 15×£0.50 = £7.50."
+      },
+      {
+        "id": "rp-30",
+        "question": "What is a common mistake when working with percentages?",
+        "answer": "A common mistake is adding percentages directly (e.g., a 10% increase followed by 10% decrease does NOT return to original). £100 +10% = £110, then -10% = £99, not £100."
+      }
     ]
   }
 }
