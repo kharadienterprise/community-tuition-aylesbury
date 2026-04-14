@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "title": "Maths Flashcards - Measures & Units",
+    "description": "Interactive flashcards for measures, units and conversions",
+    "version": "1.0",
+    "author": "Kharadi Enterprise",
+    "created": "2026-04-14"
+  },
+  "deck": {
+    "id": "deck-measures-units",
+    "name": "Measures and Units",
+    "cards": [
+      {"id": "mu-01", "question": "How many millimetres in 1 centimetre?", "answer": "10 mm", "tags": ["measures", "length"]},
+      {"id": "mu-02", "question": "How many centimetres in 1 metre?", "answer": "100 cm", "tags": ["measures", "length"]},
+      {"id": "mu-03", "question": "How many metres in 1 kilometre?", "answer": "1000 m", "tags": ["measures", "length"]},
+      {"id": "mu-04", "question": "How many millilitres in 1 litre?", "answer": "1000 ml", "tags": ["measures", "capacity"]},
+      {"id": "mu-05", "question": "How many centilitres in 1 litre?", "answer": "100 cl", "tags": ["measures", "capacity"]},
+      {"id": "mu-06", "question": "How many millilitres in 1 centilitre?", "answer": "10 ml", "tags": ["measures", "capacity"]},
+      {"id": "mu-07", "question": "How many grams in 1 kilogram?", "answer": "1000 g", "tags": ["measures", "mass"]},
+      {"id": "mu-08", "question": "How many milligrams in 1 gram?", "answer": "1000 mg", "tags": ["measures", "mass"]},
+      {"id": "mu-09", "question": "How many seconds in 1 minute?", "answer": "60 seconds", "tags": ["measures", "time"]},
+      {"id": "mu-10", "question": "How many minutes in 1 hour?", "answer": "60 minutes", "tags": ["measures", "time"]},
+      {"id": "mu-11", "question": "How many hours in 1 day?", "answer": "24 hours", "tags": ["measures", "time"]},
+      {"id": "mu-12", "question": "How many days in 1 week?", "answer": "7 days", "tags": ["measures", "time"]},
+      {"id": "mu-13", "question": "How many weeks in 1 year?", "answer": "52 weeks", "tags": ["measures", "time"]},
+      {"id": "mu-14", "question": "How many days in a common year?", "answer": "365 days", "tags": ["measures", "time"]},
+      {"id": "mu-15", "question": "How many days in a leap year?", "answer": "366 days", "tags": ["measures", "time"]},
+      {"id": "mu-16", "question": "How many months in 1 year?", "answer": "12 months", "tags": ["measures", "time"]},
+      {"id": "mu-17", "question": "How many hours in 1 day?", "answer": "24 hours", "tags": ["measures", "time"]},
+      {"id": "mu-18", "question": "How many millimetres in 1 metre?", "answer": "1000 mm", "tags": ["measures", "length"]},
+      {"id": "mu-19", "question": "How many centimetres in 1 kilometre?", "answer": "100,000 cm", "tags": ["measures", "length"]},
+      {"id": "mu-20", "question": "What is the unit of length in the metric system?", "answer": "metre (m)", "tags": ["measures", "units"]}
+    ]
+  }
+}
