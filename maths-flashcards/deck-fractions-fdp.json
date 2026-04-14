@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Maths Flashcards - Fractions, Decimals and Percentages",
+    "title": "Maths Flashcards – Fractions, Decimals and Percentages",
     "description": "Interactive flashcards for fractions, decimals and percentages conversions",
-    "version": "1.0",
+    "version": "1.1",
     "author": "Kharadi Enterprise",
     "created": "2026-04-14"
   },
@@ -10,26 +10,26 @@
     "id": "deck-fractions-fdp",
     "name": "Fractions, Decimals and Percentages",
     "cards": [
-      {"id": "fdp-01", "question": "What is 1/2 as a decimal?", "answer": "0.5", "tags": ["fractions", "decimals"]},
-      {"id": "fdp-02", "question": "What is 1/4 as a decimal?", "answer": "0.25", "tags": ["fractions", "decimals"]},
-      {"id": "fdp-03", "question": "What is 3/4 as a decimal?", "answer": "0.75", "tags": ["fractions", "decimals"]},
-      {"id": "fdp-04", "question": "What is 1/5 as a decimal?", "answer": "0.2", "tags": ["fractions", "decimals"]},
-      {"id": "fdp-05", "question": "What is 2/5 as a decimal?", "answer": "0.4", "tags": ["fractions", "decimals"]},
-      {"id": "fdp-06", "question": "What is 1/10 as a decimal?", "answer": "0.1", "tags": ["fractions", "decimals"]},
-      {"id": "fdp-07", "question": "What is 50% as a fraction?", "answer": "1/2", "tags": ["percentages", "fractions"]},
-      {"id": "fdp-08", "question": "What is 25% as a fraction?", "answer": "1/4", "tags": ["percentages", "fractions"]},
-      {"id": "fdp-09", "question": "What is 75% as a fraction?", "answer": "3/4", "tags": ["percentages", "fractions"]},
-      {"id": "fdp-10", "question": "What is 50% as a decimal?", "answer": "0.5", "tags": ["percentages", "decimals"]},
-      {"id": "fdp-11", "question": "What is 25% as a decimal?", "answer": "0.25", "tags": ["percentages", "decimals"]},
-      {"id": "fdp-12", "question": "What is 0.5 as a percentage?", "answer": "50%", "tags": ["decimals", "percentages"]},
-      {"id": "fdp-13", "question": "What is 0.25 as a percentage?", "answer": "25%", "tags": ["decimals", "percentages"]},
-      {"id": "fdp-14", "question": "What is 1/2 as a percentage?", "answer": "50%", "tags": ["fractions", "percentages"]},
-      {"id": "fdp-15", "question": "What is 1/4 as a percentage?", "answer": "25%", "tags": ["fractions", "percentages"]},
-      {"id": "fdp-16", "question": "Simplify 2/4", "answer": "1/2", "tags": ["fractions"]},
-      {"id": "fdp-17", "question": "Simplify 3/6", "answer": "1/2", "tags": ["fractions"]},
-      {"id": "fdp-18", "question": "Simplify 4/8", "answer": "1/2", "tags": ["fractions"]},
-      {"id": "fdp-19", "question": "What is 1/3 as a decimal (to 2 dp)?", "answer": "0.33", "tags": ["fractions", "decimals"]},
-      {"id": "fdp-20", "question": "What is 2/3 as a decimal (to 2 dp)?", "answer": "0.67", "tags": ["fractions", "decimals"]}
+      {"id": "fdp-01", "question": "What is 1/2 as a decimal?", "answer": "0.5. Think: divide 1 by 2 = 0.5. Visual: Imagine a circle (like a pizza) split into 2 equal halves – one half shaded. That's 1/2 = 0.5 = 50%.", "tags": ["fractions", "decimals"]},
+      {"id": "fdp-02", "question": "What is 1/4 as a decimal?", "answer": "0.25. Think: divide 1 by 4 = 0.25. Visual: Imagine a circle split into 4 equal quarters – one quarter shaded. That's 1/4 = 0.25 = 25%.", "tags": ["fractions", "decimals"]},
+      {"id": "fdp-03", "question": "What is 3/4 as a decimal?", "answer": "0.75. Think: 3 divided by 4 = 0.75, or 3×0.25 = 0.75. Visual: A circle split into 4 equal quarters – three quarters shaded. That's 3/4 = 0.75 = 75%.", "tags": ["fractions", "decimals"]},
+      {"id": "fdp-04", "question": "What is 1/5 as a decimal?", "answer": "0.2. Think: divide 1 by 5 = 0.2. Visual: Imagine a bar split into 5 equal parts – one part shaded. That's 1/5 = 0.2 = 20%.", "tags": ["fractions", "decimals"]},
+      {"id": "fdp-05", "question": "What is 2/5 as a decimal?", "answer": "0.4. Think: 2 divided by 5 = 0.4, or 2×0.2 = 0.4. Visual: A bar split into 5 equal parts – two parts shaded. That's 2/5 = 0.4 = 40%.", "tags": ["fractions", "decimals"]},
+      {"id": "fdp-06", "question": "What is 1/10 as a decimal?", "answer": "0.1. Think: divide 1 by 10 = 0.1. Visual: Imagine a number line from 0 to 1, split into 10 equal sections – one section is 1/10 = 0.1 = 10%.", "tags": ["fractions", "decimals"]},
+      {"id": "fdp-07", "question": "What is 50% as a fraction?", "answer": "1/2. Think: 50% means 50 out of 100 = 50/100 = 1/2 when simplified. Visual: Half of a pizza or half of a rectangle shaded.", "tags": ["percentages", "fractions"]},
+      {"id": "fdp-08", "question": "What is 25% as a fraction?", "answer": "1/4. Think: 25% means 25 out of 100 = 25/100 = 1/4 when simplified. Visual: One quarter of a circle or one quarter of a square shaded.", "tags": ["percentages", "fractions"]},
+      {"id": "fdp-09", "question": "What is 75% as a fraction?", "answer": "3/4. Think: 75% means 75 out of 100 = 75/100 = 3/4 when simplified. Visual: Three quarters of a circle shaded (like three slices of a 4-slice pizza).", "tags": ["percentages", "fractions"]},
+      {"id": "fdp-10", "question": "What is 50% as a decimal?", "answer": "0.5. Think: 50% = 50/100 = 0.50 = 0.5. Or divide 50 by 100. Visual: Half of any shape = 0.5 of the whole.", "tags": ["percentages", "decimals"]},
+      {"id": "fdp-11", "question": "What is 25% as a decimal?", "answer": "0.25. Think: 25% = 25/100 = 0.25. Or divide 25 by 100. Visual: One quarter of a pie chart or one quarter of a bar shaded.", "tags": ["percentages", "decimals"]},
+      {"id": "fdp-12", "question": "What is 0.5 as a percentage?", "answer": "50%. Think: multiply 0.5 by 100 = 50%. Or 0.5 = 5/10 = 50/100 = 50%. Visual: Half a pie, half a bar, or half a number line = 50%.", "tags": ["decimals", "percentages"]},
+      {"id": "fdp-13", "question": "What is 0.25 as a percentage?", "answer": "25%. Think: multiply 0.25 by 100 = 25%. Or 0.25 = 25/100 = 25%. Visual: One quarter of a circle, square, or bar = 25%.", "tags": ["decimals", "percentages"]},
+      {"id": "fdp-14", "question": "What is 1/2 as a percentage?", "answer": "50%. Think: 1/2 = 0.5, then 0.5×100 = 50%. Or 1/2 = 50/100 = 50%. Visual: Half a pie chart, half a rectangle, or half a clock face = 50%.", "tags": ["fractions", "percentages"]},
+      {"id": "fdp-15", "question": "What is 1/4 as a percentage?", "answer": "25%. Think: 1/4 = 0.25, then 0.25×100 = 25%. Or 1/4 = 25/100 = 25%. Visual: One quarter of a circle, one slice of a 4-slice pizza = 25%.", "tags": ["fractions", "percentages"]},
+      {"id": "fdp-16", "question": "Simplify 2/4", "answer": "1/2. Divide both top and bottom by 2: 2÷2=1, 4÷2=2, so 2/4 = 1/2. Visual: Two shaded parts out of four equals the same as one shaded part out of two – they cover the same area.", "tags": ["fractions"]},
+      {"id": "fdp-17", "question": "Simplify 3/6", "answer": "1/2. Divide both top and bottom by 3: 3÷3=1, 6÷3=2, so 3/6 = 1/2. Visual: Three shaded parts out of six equals half the shape – same as 1/2.", "tags": ["fractions"]},
+      {"id": "fdp-18", "question": "Simplify 4/8", "answer": "1/2. Divide both top and bottom by 4: 4÷4=1, 8÷4=2, so 4/8 = 1/2. Visual: Four shaded parts out of eight covers exactly half of the shape – same as 1/2.", "tags": ["fractions"]},
+      {"id": "fdp-19", "question": "What is 1/3 as a decimal (to 2 dp)?", "answer": "0.33. Think: divide 1 by 3 = 0.333... which rounds to 0.33 (to 2 decimal places). Visual: A circle split into 3 equal parts – one shaded is about one-third, slightly less than half.", "tags": ["fractions", "decimals"]},
+      {"id": "fdp-20", "question": "What is 2/3 as a decimal (to 2 dp)?", "answer": "0.67. Think: divide 2 by 3 = 0.666... which rounds to 0.67 (to 2 decimal places). Visual: A circle split into 3 equal parts – two shaded covers about two-thirds, slightly more than half.", "tags": ["fractions", "decimals"]}
     ]
   }
 }
