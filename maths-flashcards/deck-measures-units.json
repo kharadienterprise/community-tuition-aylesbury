@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Maths Flashcards - Measures & Units",
-    "description": "Interactive flashcards for measures, units and conversions",
-    "version": "1.0",
+    "title": "Maths Flashcards – Measures & Units",
+    "description": "Interactive flashcards for measures, units and conversions with visual guides and real-world examples",
+    "version": "1.1",
     "author": "Kharadi Enterprise",
     "created": "2026-04-14"
   },
@@ -10,26 +10,131 @@
     "id": "deck-measures-units",
     "name": "Measures and Units",
     "cards": [
-      {"id": "mu-01", "question": "How many millimetres in 1 centimetre?", "answer": "10 mm", "tags": ["measures", "length"]},
-      {"id": "mu-02", "question": "How many centimetres in 1 metre?", "answer": "100 cm", "tags": ["measures", "length"]},
-      {"id": "mu-03", "question": "How many metres in 1 kilometre?", "answer": "1000 m", "tags": ["measures", "length"]},
-      {"id": "mu-04", "question": "How many millilitres in 1 litre?", "answer": "1000 ml", "tags": ["measures", "capacity"]},
-      {"id": "mu-05", "question": "How many centilitres in 1 litre?", "answer": "100 cl", "tags": ["measures", "capacity"]},
-      {"id": "mu-06", "question": "How many millilitres in 1 centilitre?", "answer": "10 ml", "tags": ["measures", "capacity"]},
-      {"id": "mu-07", "question": "How many grams in 1 kilogram?", "answer": "1000 g", "tags": ["measures", "mass"]},
-      {"id": "mu-08", "question": "How many milligrams in 1 gram?", "answer": "1000 mg", "tags": ["measures", "mass"]},
-      {"id": "mu-09", "question": "How many seconds in 1 minute?", "answer": "60 seconds", "tags": ["measures", "time"]},
-      {"id": "mu-10", "question": "How many minutes in 1 hour?", "answer": "60 minutes", "tags": ["measures", "time"]},
-      {"id": "mu-11", "question": "How many hours in 1 day?", "answer": "24 hours", "tags": ["measures", "time"]},
-      {"id": "mu-12", "question": "How many days in 1 week?", "answer": "7 days", "tags": ["measures", "time"]},
-      {"id": "mu-13", "question": "How many weeks in 1 year?", "answer": "52 weeks", "tags": ["measures", "time"]},
-      {"id": "mu-14", "question": "How many days in a common year?", "answer": "365 days", "tags": ["measures", "time"]},
-      {"id": "mu-15", "question": "How many days in a leap year?", "answer": "366 days", "tags": ["measures", "time"]},
-      {"id": "mu-16", "question": "How many months in 1 year?", "answer": "12 months", "tags": ["measures", "time"]},
-      {"id": "mu-17", "question": "How many hours in 1 day?", "answer": "24 hours", "tags": ["measures", "time"]},
-      {"id": "mu-18", "question": "How many millimetres in 1 metre?", "answer": "1000 mm", "tags": ["measures", "length"]},
-      {"id": "mu-19", "question": "How many centimetres in 1 kilometre?", "answer": "100,000 cm", "tags": ["measures", "length"]},
-      {"id": "mu-20", "question": "What is the unit of length in the metric system?", "answer": "metre (m)", "tags": ["measures", "units"]}
+      {
+        "id": "mu-01",
+        "question": "How many millimetres in 1 centimetre?",
+        "answer": "10 mm. Visual: Think of a standard pencil eraser – it's about 1 cm long, which equals 10 mm. The prefix 'milli-' means thousandth, so there are 1000 mm in a metre, and 100 cm in a metre, giving 10 mm per cm."
+      },
+      {
+        "id": "mu-02",
+        "question": "How many centimetres in 1 metre?",
+        "answer": "100 cm. Visual: A standard ruler is 30 cm. Three rulers end-to-end would be close to 1 metre. The prefix 'centi-' means hundredth, so 100 cm = 1 m."
+      },
+      {
+        "id": "mu-03",
+        "question": "How many metres in 1 kilometre?",
+        "answer": "1000 m. Visual: A kilometre is roughly the distance you can walk in 10-12 minutes at a normal pace. The prefix 'kilo-' means thousand, so 1 km = 1000 m."
+      },
+      {
+        "id": "mu-04",
+        "question": "How many millilitres in 1 litre?",
+        "answer": "1000 ml. Visual: A standard water bottle holds about 500 ml, so two bottles make 1 litre. A large jug of milk is typically 1 litre."
+      },
+      {
+        "id": "mu-05",
+        "question": "How many centilitres in 1 litre?",
+        "answer": "100 cl. Visual: Wine bottles are often labelled in cl – a standard wine bottle is 75 cl (750 ml). The prefix 'centi-' means hundredth, so 100 cl = 1 litre."
+      },
+      {
+        "id": "mu-06",
+        "question": "How many millilitres in 1 centilitre?",
+        "answer": "10 ml. Visual: A teaspoon holds about 5 ml, so 2 teaspoons = 10 ml = 1 cl. This is useful for measuring small amounts of liquid in cooking."
+      },
+      {
+        "id": "mu-07",
+        "question": "How many grams in 1 kilogram?",
+        "answer": "1000 g. Visual: A standard bag of sugar is 1 kg. A bar of chocolate is often 100 g, so 10 chocolate bars would weigh 1 kg."
+      },
+      {
+        "id": "mu-08",
+        "question": "How many milligrams in 1 gram?",
+        "answer": "1000 mg. Visual: A paperclip weighs about 1 gram. Medication doses are often measured in mg – 500 mg is half a gram."
+      },
+      {
+        "id": "mu-09",
+        "question": "How many seconds in 1 minute?",
+        "answer": "60 seconds. Visual: The second hand on an analogue clock takes exactly 60 seconds to complete one full circle."
+      },
+      {
+        "id": "mu-10",
+        "question": "How many minutes in 1 hour?",
+        "answer": "60 minutes. Visual: The minute hand on a clock takes 60 minutes to go from 12 back to 12. Half an hour is 30 minutes."
+      },
+      {
+        "id": "mu-11",
+        "question": "How many hours in 1 day?",
+        "answer": "24 hours. Visual: From midnight to midnight is 24 hours. Half a day is 12 hours."
+      },
+      {
+        "id": "mu-12",
+        "question": "How many days in 1 week?",
+        "answer": "7 days. The days are: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. A school week is typically 5 days."
+      },
+      {
+        "id": "mu-13",
+        "question": "How many weeks in 1 year?",
+        "answer": "52 weeks. Since there are 365 days in a year and 7 days in a week, 365 ÷ 7 = 52 weeks and 1 day (or 2 days in a leap year)."
+      },
+      {
+        "id": "mu-14",
+        "question": "How many days in a common year?",
+        "answer": "365 days. A common year has 12 months: 7 months have 31 days, 4 months have 30 days, and February has 28 days."
+      },
+      {
+        "id": "mu-15",
+        "question": "How many days in a leap year?",
+        "answer": "366 days. Leap years occur every 4 years (years divisible by 4), when February has 29 days instead of 28. Example: 2024, 2028, 2032."
+      },
+      {
+        "id": "mu-16",
+        "question": "How many months in 1 year?",
+        "answer": "12 months. The months are: January, February, March, April, May, June, July, August, September, October, November, December."
+      },
+      {
+        "id": "mu-17",
+        "question": "How many seconds in 1 hour?",
+        "answer": "3600 seconds. Calculation: 60 seconds × 60 minutes = 3600 seconds. This is useful for timing events or calculating speeds."
+      },
+      {
+        "id": "mu-18",
+        "question": "How many millimetres in 1 metre?",
+        "answer": "1000 mm. Visual: Since there are 100 cm in a metre and 10 mm in each cm, 100 × 10 = 1000 mm. A standard door is about 2000 mm (2 m) tall."
+      },
+      {
+        "id": "mu-19",
+        "question": "How many centimetres in 1 kilometre?",
+        "answer": "100,000 cm. Calculation: 1 km = 1000 m, and 1 m = 100 cm, so 1000 × 100 = 100,000 cm. This shows how large a kilometre is compared to centimetres."
+      },
+      {
+        "id": "mu-20",
+        "question": "What is the unit of length in the metric system?",
+        "answer": "The metre (m). It is the base unit of length in the International System of Units (SI). All other length units (km, cm, mm) are derived from it."
+      },
+      {
+        "id": "mu-21",
+        "question": "What is the unit of mass in the metric system?",
+        "answer": "The gram (g). The kilogram (kg) is the base SI unit (1000 g = 1 kg). Mass measures how much matter is in an object, different from weight."
+      },
+      {
+        "id": "mu-22",
+        "question": "What is the unit of capacity/volume in the metric system?",
+        "answer": "The litre (L or l). 1 litre = 1000 ml = 1000 cubic centimetres (cm³). A cube with sides of 10 cm holds exactly 1 litre of water."
+      },
+      {
+        "id": "mu-23",
+        "question": "How do you convert between metric units using prefixes?",
+        "answer": "Remember: kilo- (×1000), hecto- (×100), deca- (×10), base unit, deci- (÷10), centi- (÷100), milli- (÷1000). Moving down the scale multiply, moving up divide."
+      },
+      {
+        "id": "mu-24",
+        "question": "What is the relationship between grams, millilitres, and water?",
+        "answer": "1 ml of water weighs approximately 1 gram at room temperature. This means 1 litre of water weighs about 1 kg. This is very useful for cooking and science."
+      },
+      {
+        "id": "mu-25",
+        "question": "How do you remember the metric conversion order?",
+        "answer": "Use the mnemonic 'King Henry Died By Drinking Chocolate Milk': Kilo, Hecto, Deca, Base, Deci, Centi, Milli. Each step is ×10 or ÷10."
+      }
     ]
   }
 }
