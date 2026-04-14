@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "title": "Maths Flashcards - Squares and Cubes",
+    "description": "Interactive flashcards for perfect squares and cubes",
+    "version": "1.0",
+    "author": "Kharadi Enterprise",
+    "created": "2026-04-14"
+  },
+  "deck": {
+    "id": "deck-squares-cubes",
+    "name": "Squares and Cubes",
+    "cards": [
+      {"id": "sc-01", "question": "What is 1 squared?", "answer": "1", "tags": ["squares"]},
+      {"id": "sc-02", "question": "What is 2 squared?", "answer": "4", "tags": ["squares"]},
+      {"id": "sc-03", "question": "What is 3 squared?", "answer": "9", "tags": ["squares"]},
+      {"id": "sc-04", "question": "What is 4 squared?", "answer": "16", "tags": ["squares"]},
+      {"id": "sc-05", "question": "What is 5 squared?", "answer": "25", "tags": ["squares"]},
+      {"id": "sc-06", "question": "What is 6 squared?", "answer": "36", "tags": ["squares"]},
+      {"id": "sc-07", "question": "What is 7 squared?", "answer": "49", "tags": ["squares"]},
+      {"id": "sc-08", "question": "What is 8 squared?", "answer": "64", "tags": ["squares"]},
+      {"id": "sc-09", "question": "What is 9 squared?", "answer": "81", "tags": ["squares"]},
+      {"id": "sc-10", "question": "What is 10 squared?", "answer": "100", "tags": ["squares"]},
+      {"id": "sc-11", "question": "What is 11 squared?", "answer": "121", "tags": ["squares"]},
+      {"id": "sc-12", "question": "What is 12 squared?", "answer": "144", "tags": ["squares"]},
+      {"id": "sc-13", "question": "What is 1 cubed?", "answer": "1", "tags": ["cubes"]},
+      {"id": "sc-14", "question": "What is 2 cubed?", "answer": "8", "tags": ["cubes"]},
+      {"id": "sc-15", "question": "What is 3 cubed?", "answer": "27", "tags": ["cubes"]},
+      {"id": "sc-16", "question": "What is 4 cubed?", "answer": "64", "tags": ["cubes"]},
+      {"id": "sc-17", "question": "What is 5 cubed?", "answer": "125", "tags": ["cubes"]},
+      {"id": "sc-18", "question": "What is 10 cubed?", "answer": "1000", "tags": ["cubes"]},
+      {"id": "sc-19", "question": "What is the square root of 16?", "answer": "4", "tags": ["square root"]},
+      {"id": "sc-20", "question": "What is the square root of 25?", "answer": "5", "tags": ["square root"]}
+    ]
+  }
+}
