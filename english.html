@@ -44,85 +44,46 @@
             font-size: 1.2rem;
             margin-bottom: 40px;
         }
-        .section-title {
-            color: #e74c3c;
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #e74c3c;
-        }
         .cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
             margin-bottom: 40px;
         }
         .card {
             background: white;
             border-radius: 12px;
-            padding: 25px 20px;
+            padding: 35px 25px;
             text-align: center;
             text-decoration: none;
             transition: all 0.3s ease;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            border-top: 4px solid;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-top: 5px solid;
         }
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
         }
         .card.flashcards { border-color: #27ae60; }
         .card.worksheets { border-color: #e67e22; }
         .card.practice { border-color: #3498db; }
         .card.exams { border-color: #9b59b6; }
-        .card.vocab { border-color: #27ae60; }
-        .card.comprehension { border-color: #27ae60; }
-        .card.grammar { border-color: #27ae60; }
-        .card.spelling { border-color: #27ae60; }
-        .card.punctuation { border-color: #27ae60; }
-        .card.writing { border-color: #27ae60; }
         .card-icon {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
+            font-size: 2.5rem;
+            margin-bottom: 12px;
         }
-        .card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-        }
-        .card.flashcards h3 { color: #27ae60; }
-        .card.worksheets h3 { color: #e67e22; }
-        .card.practice h3 { color: #3498db; }
-        .card.exams h3 { color: #9b59b6; }
-        .card p {
-            color: #888;
-            font-size: 0.85rem;
-        }
-        .flashcards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 15px;
-        }
-        .sub-card {
-            background: white;
-            border-radius: 10px;
-            padding: 20px 15px;
-            text-align: center;
-            text-decoration: none;
-            transition: all 0.25s ease;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            border-top: 3px solid #27ae60;
-        }
-        .sub-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.12);
-        }
-        .sub-card .icon {
-            font-size: 1.8rem;
+        .card h2 {
+            font-size: 1.3rem;
             margin-bottom: 8px;
         }
-        .sub-card h4 {
-            color: #2c3e50;
-            font-size: 1rem;
+        .card.flashcards h2 { color: #27ae60; }
+        .card.worksheets h2 { color: #e67e22; }
+        .card.practice h2 { color: #3498db; }
+        .card.exams h2 { color: #9b59b6; }
+        .card p {
+            color: #888;
+            font-size: 0.9rem;
+            line-height: 1.5;
         }
         footer {
             text-align: center;
@@ -138,65 +99,36 @@
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-link">&larr; Back to Home</a>
+        <a href="index.html" class="back-link">← Back to Home</a>
         <h1>English</h1>
         <p class="subtitle">Master all areas of the 11+ English curriculum</p>
-
-        <h2 class="section-title">Resource Types</h2>
+        
         <div class="cards-grid">
-            <a href="#flashcards" class="card flashcards">
+            <a href="english-flashcards/" class="card flashcards">
                 <div class="card-icon">🃏</div>
-                <h3>Flashcards</h3>
-                <p>Interactive cards for quick revision</p>
+                <h2>Flashcards</h2>
+                <p>Vocabulary, Comprehension, Grammar, Spelling, Punctuation &amp; Writing</p>
             </a>
             <a href="#worksheets" class="card worksheets">
                 <div class="card-icon">📝</div>
-                <h3>Worksheets</h3>
-                <p>Downloadable practice sheets</p>
+                <h2>Worksheets</h2>
+                <p>Downloadable practice sheets for every topic</p>
             </a>
             <a href="#practice" class="card practice">
                 <div class="card-icon">✏️</div>
-                <h3>Practice</h3>
-                <p>Online exercises and quizzes</p>
+                <h2>Practice</h2>
+                <p>Online exercises and interactive quizzes</p>
             </a>
             <a href="#exams" class="card exams">
                 <div class="card-icon">📄</div>
-                <h3>Exam Papers</h3>
+                <h2>Exam Papers</h2>
                 <p>Full past papers and mock tests</p>
             </a>
         </div>
-
-        <h2 id="flashcards" class="section-title">Flashcards</h2>
-        <div class="flashcards-grid">
-            <a href="#" class="sub-card vocab">
-                <div class="icon">📖</div>
-                <h4>Vocabulary</h4>
-            </a>
-            <a href="#" class="sub-card comprehension">
-                <div class="icon">📚</div>
-                <h4>Comprehension</h4>
-            </a>
-            <a href="#" class="sub-card grammar">
-                <div class="icon">🔤</div>
-                <h4>Grammar</h4>
-            </a>
-            <a href="#" class="sub-card spelling">
-                <div class="icon">✍️</div>
-                <h4>Spelling</h4>
-            </a>
-            <a href="#" class="sub-card punctuation">
-                <div class="icon">❗</div>
-                <h4>Punctuation</h4>
-            </a>
-            <a href="#" class="sub-card writing">
-                <div class="icon">📝</div>
-                <h4>Writing</h4>
-            </a>
-        </div>
-
+        
         <footer>
             <div class="copyright">
-                &copy; 2026 Kharadi Enterprise Ltd. (Teknowlogia Lab)
+                © 2026 Kharadi Enterprise Ltd. (Teknowlogia Lab)
             </div>
         </footer>
     </div>
