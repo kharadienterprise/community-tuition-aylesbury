@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community Tuition Aylesbury - Flash Cards</title>
+    <title>Community Tuition Aylesbury - 11+ Learning Resources</title>
     <style>
         * {
             margin: 0;
@@ -33,126 +33,138 @@
             font-size: 1.2rem;
             margin-bottom: 50px;
         }
-        .cards-grid {
+        .sections-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            padding: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
         }
-        .card {
+        .section-card {
             background: white;
-            border-radius: 20px;
-            padding: 40px 30px;
+            border-radius: 16px;
+            padding: 30px 25px;
             text-align: center;
             text-decoration: none;
-            color: #333;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-top: 5px solid;
         }
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        .section-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
         }
-        .card-icon {
-            font-size: 4rem;
-            margin-bottom: 20px;
+        .section-card.english { border-color: #e74c3c; }
+        .section-card.vr { border-color: #3498db; }
+        .section-card.nvr { border-color: #f39c12; }
+        .section-card.maths { border-color: #9b59b6; }
+        .section-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
         }
-        .card-title {
+        .section-card h2 {
             font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: #2d3748;
+            margin-bottom: 8px;
         }
-        .card-desc {
-            font-size: 1rem;
-            color: #718096;
-            line-height: 1.6;
+        .section-card.english h2 { color: #e74c3c; }
+        .section-card.vr h2 { color: #3498db; }
+        .section-card.nvr h2 { color: #f39c12; }
+        .section-card.maths h2 { color: #9b59b6; }
+        .section-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
-        .card.vocab { border-top: 5px solid #48bb78; }
-        .card.maths { border-top: 5px solid #ed8936; }
-        .card.vr { border-top: 5px solid #4299e1; }
-        .card.nvr { border-top: 5px solid #ed64a6; }
-        .card.vocab .card-icon { color: #48bb78; }
-        .card.maths .card-icon { color: #ed8936; }
-        .card.vr .card-icon { color: #4299e1; }
-        .card.nvr .card-icon { color: #ed64a6; }
-        @media (max-width: 600px) {
-            h1 { font-size: 1.8rem; }
-            .subtitle { font-size: 1rem; }
-            .card-icon { font-size: 3rem; }
-            .card-title { font-size: 1.3rem; }
+        .section-preview {
+            background: white;
+            border-radius: 16px;
+            padding: 40px 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-
-        footer {
-            margin-top: 50px;
+        .section-preview h2 {
             text-align: center;
+            color: #333;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
         }
-        .controls {
-            margin-bottom: 20px;
+        .section-preview p {
+            text-align: center;
+            color: #666;
+            font-size: 1.05rem;
+            margin-bottom: 30px;
         }
-        .home-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+        .resource-types {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .resource-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 12px 30px;
+            padding: 10px 20px;
             border-radius: 25px;
-            text-decoration: none;
-            font-weight: 700;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-size: 0.95rem;
+            font-weight: 600;
         }
-        .home-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.2);
         }
-        .copyright {
+        footer .copyright {
             color: rgba(255,255,255,0.7);
             font-size: 0.9rem;
         }
-        .copyright strong {
-            color: #fff;
-            font-weight: 700;
-        }    </style>
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>Community Tuition Aylesbury</h1>
-        <p class="subtitle">Interactive Flash Cards for 11+ Exam Preparation</p>
-        
-        <div class="cards-grid">
-            <a href="vocab-flash-cards/" class="card vocab">
-                <div class="card-icon">&#128218;</div>
-                <h2 class="card-title">Vocab Flash Cards</h2>
-                <p class="card-desc">Master essential vocabulary for the 11+ verbal reasoning section.</p>
+        <h1>11+ Learning Resources</h1>
+        <p class="subtitle">Comprehensive study materials for every 11+ subject area</p>
+
+        <div class="sections-grid">
+            <a href="english.html" class="section-card english">
+                <div class="section-icon">📚</div>
+                <h2>English</h2>
+                <p>Vocabulary, Comprehension, Grammar, Spelling, Punctuation & Writing</p>
             </a>
-            
-                    <a href="maths-flashcards/" class="card maths">
-                <div class="card-icon">&#128290;</div>
-                <h2 class="card-title">Maths Flash Cards</h2>
-                <p class="card-desc">Practice key maths concepts and problem-solving techniques.</p>
+
+            <a href="vr.html" class="section-card vr">
+                <div class="section-icon">💬</div>
+                <h2>Verbal Reasoning</h2>
+                <p>Word patterns, codes, analogies, sequences and logical thinking</p>
             </a>
-            
-            <a href="#" class="card vr">
-                <div class="card-icon">&#129488;</div>
-                <h2 class="card-title">VR Flash Cards</h2>
-                <p class="card-desc">Verbal Reasoning practice to boost logical thinking skills.</p>
+
+            <a href="nvr.html" class="section-card nvr">
+                <div class="section-icon">🔷</div>
+                <h2>Non-Verbal Reasoning</h2>
+                <p>Patterns, shapes, sequences, mirrors and spatial awareness</p>
             </a>
-            
-            <a href="#" class="card nvr">
-                <div class="card-icon">&#128279;</div>
-                <h2 class="card-title">NVR Flash Cards</h2>
-                <p class="card-desc">Non-Verbal Reasoning patterns and visual puzzle challenges.</p>
+
+            <a href="maths.html" class="section-card maths">
+                <div class="section-icon">🧮</div>
+                <h2>Maths</h2>
+                <p>Arithmetic, Algebra, Fractions, Ratios, Measures, Geometry & more</p>
             </a>
         </div>
-    </div>
 
+        <div class="section-preview">
+            <h2>What's Inside Each Section?</h2>
+            <p>Every subject area is packed with interactive learning tools to help your child master the 11+ curriculum:</p>
+            <div class="resource-types">
+                <span class="resource-badge">🃏 Flashcards</span>
+                <span class="resource-badge">📝 Worksheets</span>
+                <span class="resource-badge">✏️ Practice</span>
+                <span class="resource-badge">📄 Exam Papers</span>
+            </div>
+        </div>
 
-<footer>
-            
+        <footer>
             <div class="copyright">
-                © 2026 Kharadi Enterprise Ltd. (Teknowlogia Lab)
+                &copy; 2026 Kharadi Enterprise Ltd. (Teknowlogia Lab)
             </div>
         </footer>
-    </body>
+    </div>
+</body>
 </html>
