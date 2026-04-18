@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maths Flash Cards – Community Tuition Aylesbury</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    .container { max-width: 1200px; margin: 0 auto; }
+    h1 {
+      text-align: center;
+      color: white;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    .subtitle {
+      text-align: center;
+      color: rgba(255,255,255,0.9);
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+    }
+    .back-link {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .back-link a {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.3s ease;
+    }
+    .back-link a:hover { background: rgba(255,255,255,0.3); }
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 40px 30px;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    .card-icon { font-size: 4rem; margin-bottom: 20px; }
+    .card-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 10px; color: #2d3748; }
+    .card-desc { font-size: 1rem; color: #718096; line-height: 1.6; }
+    .card.algebra { border-top: 5px solid #3182ce; }
+    .card.definitions { border-top: 5px solid #d69e2e; }
+    .card.fractions { border-top: 5px solid #e53e3e; }
+    .card.measures { border-top: 5px solid #805ad5; }
+    .card.ratio { border-top: 5px solid #38a169; }
+    .card.squares { border-top: 5px solid #ed64a6; }
+    .card.times { border-top: 5px solid #dd6b20; }
+    .card.algebra .card-icon { color: #3182ce; }
+    .card.definitions .card-icon { color: #d69e2e; }
+    .card.fractions .card-icon { color: #e53e3e; }
+    .card.measures .card-icon { color: #805ad5; }
+    .card.ratio .card-icon { color: #38a169; }
+    .card.squares .card-icon { color: #ed64a6; }
+    .card.times .card-icon { color: #dd6b20; }
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8rem; }
+      .subtitle { font-size: 1rem; }
+      .card-icon { font-size: 3rem; }
+      .card-title { font-size: 1.3rem; }
+    }
+    footer { margin-top: 50px; text-align: center; }
+    .copyright { color: rgba(255,255,255,0.7); font-size: 0.9rem; }
+    .copyright strong { color: #fff; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Maths Flash Cards</h1>
+    <p class="subtitle">Master Key Maths Skills for the 11+ Exam</p>
+    <p class="back-link"><a href="../../maths.html">← Back to Maths Section</a></p>
+    <div class="cards-grid">
+      <a href="../index.html#algebra" class="card algebra">
+        <div class="card-icon">📐</div>
+        <div class="card-title">Algebra</div>
+        <div class="card-desc">Variables, expressions, equations, and algebraic reasoning for 11+ maths.</div>
+      </a>
+      <a href="../index.html#definitions1" class="card definitions">
+        <div class="card-icon">📚</div>
+        <div class="card-title">Definitions Set 1</div>
+        <div class="card-desc">Core maths terminology and definitions tested in 11+ exams.</div>
+      </a>
+      <a href="../index.html#definitions2" class="card definitions">
+        <div class="card-icon">📘</div>
+        <div class="card-title">Definitions Set 2</div>
+        <div class="card-desc">Advanced maths terms and concepts for 11+ preparation.</div>
+      </a>
+      <a href="../index.html#fractions" class="card fractions">
+        <div class="card-icon">🍰</div>
+        <div class="card-title">Fractions, Decimals & Percentages</div>
+        <div class="card-desc">Convert between fractions, decimals and percentages with confidence.</div>
+      </a>
+      <a href="../index.html#measures" class="card measures">
+        <div class="card-icon">⚖️</div>
+        <div class="card-title">Measures & Units</div>
+        <div class="card-desc">Length, weight, capacity, time and unit conversions for 11+ maths.</div>
+      </a>
+      <a href="../index.html#ratio" class="card ratio">
+        <div class="card-icon">📊</div>
+        <div class="card-title">Ratio & Percentage</div>
+        <div class="card-desc">Ratios, proportions and percentage calculations for 11+ success.</div>
+      </a>
+      <a href="../index.html#squares" class="card squares">
+        <div class="card-icon">🔢</div>
+        <div class="card-title">Squares & Cubes</div>
+        <div class="card-desc">Square numbers, cube numbers, square roots and cube roots.</div>
+      </a>
+      <a href="../index.html#times" class="card times">
+        <div class="card-icon">✖️</div>
+        <div class="card-title">Times Tables 0–12</div>
+        <div class="card-desc">Master all multiplication tables from 0 to 12 for 11+ maths.</div>
+      </a>
+    </div>
+    <footer>
+      <p class="copyright">© 2026 <strong>Kharadi Enterprise Ltd.</strong> (Teknowlogia Lab)</p>
+    </footer>
+  </div>
+</body>
+</html>
