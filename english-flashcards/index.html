@@ -1,168 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>English Flash Cards — Community Tuition Aylesbury</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
-      min-height: 100vh;
-      padding: 40px 20px;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    h1 {
-      text-align: center;
-      color: white;
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    }
-    .subtitle {
-      text-align: center;
-      color: rgba(255,255,255,0.9);
-      font-size: 1.2rem;
-      margin-bottom: 15px;
-    }
-    .back-link {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .back-link a {
-      display: inline-block;
-      background: rgba(255,255,255,0.2);
-      color: white;
-      padding: 8px 20px;
-      border-radius: 20px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      transition: background 0.3s ease;
-    }
-    .back-link a:hover {
-      background: rgba(255,255,255,0.3);
-    }
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      padding: 20px;
-    }
-    .card {
-      background: white;
-      border-radius: 20px;
-      padding: 40px 30px;
-      text-align: center;
-      text-decoration: none;
-      color: #333;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-    }
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-    }
-    .card-icon {
-      font-size: 4rem;
-      margin-bottom: 20px;
-    }
-    .card-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-      color: #2d3748;
-    }
-    .card-desc {
-      font-size: 1rem;
-      color: #718096;
-      line-height: 1.6;
-    }
-    .card.comprehension { border-top: 5px solid #3182ce; }
-    .card.grammar { border-top: 5px solid #d69e2e; }
-    .card.spelling { border-top: 5px solid #e53e3e; }
-    .card.punctuation { border-top: 5px solid #805ad5; }
-    .card.writing { border-top: 5px solid #38a169; }
-    .card.comprehension .card-icon { color: #3182ce; }
-    .card.grammar .card-icon { color: #d69e2e; }
-    .card.spelling .card-icon { color: #e53e3e; }
-    .card.punctuation .card-icon { color: #805ad5; }
-    .card.writing .card-icon { color: #38a169; }
-    @media (max-width: 600px) {
-      h1 { font-size: 1.8rem; }
-      .subtitle { font-size: 1rem; }
-      .card-icon { font-size: 3rem; }
-      .card-title { font-size: 1.3rem; }
-    }
-    footer {
-      margin-top: 50px;
-      text-align: center;
-    }
-    .copyright {
-      color: rgba(255,255,255,0.7);
-      font-size: 0.9rem;
-    }
-    .copyright strong {
-      color: #fff;
-      font-weight: 700;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Flash Cards – Community Tuition Aylesbury</title>
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+min-height: 100vh;
+padding: 40px 20px;
+}
+.container {
+max-width: 1200px;
+margin: 0 auto;
+}
+h1 {
+text-align: center;
+color: white;
+font-size: 2.5rem;
+margin-bottom: 10px;
+text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+.subtitle {
+text-align: center;
+color: rgba(255,255,255,0.9);
+font-size: 1.2rem;
+margin-bottom: 15px;
+}
+.back-link {
+text-align: center;
+margin-bottom: 30px;
+}
+.back-link a {
+display: inline-block;
+background: rgba(255,255,255,0.2);
+color: white;
+padding: 8px 20px;
+border-radius: 20px;
+text-decoration: none;
+font-weight: 600;
+font-size: 0.9rem;
+transition: background 0.3s ease;
+}
+.back-link a:hover {
+background: rgba(255,255,255,0.3);
+}
+.cards-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 30px;
+padding: 20px;
+}
+.card {
+background: white;
+border-radius: 20px;
+padding: 40px 30px;
+text-align: center;
+text-decoration: none;
+color: #333;
+box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+cursor: pointer;
+}
+.card:hover {
+transform: translateY(-10px);
+box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+.card-icon {
+font-size: 4rem;
+margin-bottom: 20px;
+}
+.card-title {
+font-size: 1.5rem;
+font-weight: 700;
+margin-bottom: 10px;
+color: #2d3748;
+}
+.card-desc {
+font-size: 1rem;
+color: #718096;
+line-height: 1.6;
+}
+.card.comprehension { border-top: 5px solid #3182ce; }
+.card.grammar { border-top: 5px solid #d69e2e; }
+.card.spelling { border-top: 5px solid #e53e3e; }
+.card.punctuation { border-top: 5px solid #805ad5; }
+.card.writing { border-top: 5px solid #38a169; }
+.card.vocabulary { border-top: 5px solid #ed64a6; }
+.card.comprehension .card-icon { color: #3182ce; }
+.card.grammar .card-icon { color: #d69e2e; }
+.card.spelling .card-icon { color: #e53e3e; }
+.card.punctuation .card-icon { color: #805ad5; }
+.card.writing .card-icon { color: #38a169; }
+.card.vocabulary .card-icon { color: #ed64a6; }
+@media (max-width: 600px) {
+h1 { font-size: 1.8rem; }
+.subtitle { font-size: 1rem; }
+.card-icon { font-size: 3rem; }
+.card-title { font-size: 1.3rem; }
+}
+footer {
+margin-top: 50px;
+text-align: center;
+}
+.copyright {
+color: rgba(255,255,255,0.7);
+font-size: 0.9rem;
+}
+.copyright strong {
+color: #fff;
+font-weight: 700;
+}
+</style>
 </head>
 <body>
-  <div class="container">
-    <h1>English Flash Cards</h1>
-    <p class="subtitle">Master Key English Skills for the 11+ Exam</p>
-    <div class="back-link">
-      <a href="../">← Back to Home</a>
-    </div>
-
-    <div class="cards-grid">
-      <a href="comprehension/" class="card comprehension">
-        <div class="card-icon">📖</div>
-        <h2 class="card-title">Comprehension</h2>
-        <p class="card-desc">Reading passages, inference questions, and understanding context for 11+ English comprehension.</p>
-      </a>
-
-      <a href="grammar/" class="card grammar">
-        <div class="card-icon">✏️</div>
-        <h2 class="card-title">Grammar</h2>
-        <p class="card-desc">Parts of speech, sentence structure, tenses, and grammar rules for 11+ success.</p>
-      </a>
-
-      <a href="spelling/" class="card spelling">
-        <div class="card-icon">🔤</div>
-        <h2 class="card-title">Spelling</h2>
-        <p class="card-desc">Common tricky spellings, homophones, and spelling patterns tested in 11+ exams.</p>
-      </a>
-
-      <a href="punctuation/" class="card punctuation">
-        <div class="card-icon">❗</div>
-        <h2 class="card-title">Punctuation</h2>
-        <p class="card-desc">Commas, apostrophes, speech marks, and punctuation rules for clear written English.</p>
-      </a>
-
-      <a href="writing/" class="card writing">
-        <div class="card-icon">📝</div>
-        <h2 class="card-title">Writing Skills</h2>
-        <p class="card-desc">Creative writing tips, story structure, descriptive language, and planning strategies.</p>
-      </a>
-    </div>
-  </div>
-
-  <footer>
-    <div class="copyright">
-      © 2026 Kharadi Enterprise Ltd. (Teknowlogia Lab)
-    </div>
-  </footer>
+<div class="container">
+<h1>English Flash Cards</h1>
+<p class="subtitle">Master Key English Skills for the 11+ Exam</p>
+<div class="back-link">
+<a href="../english.html">← Back to English Section</a>
+</div>
+<div class="cards-grid">
+<a href="../vocab-flash-cards/" class="card vocabulary">
+<div class="card-icon">📚</div>
+<h2 class="card-title">Vocabulary</h2>
+<p class="card-desc">Build your word power with essential 11+ vocabulary flashcards, synonyms, antonyms, and word usage.</p>
+</a>
+<a href="comprehension/" class="card comprehension">
+<div class="card-icon">📖</div>
+<h2 class="card-title">Comprehension</h2>
+<p class="card-desc">Reading passages, inference questions, and understanding context for 11+ English comprehension.</p>
+</a>
+<a href="grammar/" class="card grammar">
+<div class="card-icon">✏️</div>
+<h2 class="card-title">Grammar</h2>
+<p class="card-desc">Parts of speech, sentence structure, tenses, and grammar rules for 11+ success.</p>
+</a>
+<a href="spelling/" class="card spelling">
+<div class="card-icon">🔤</div>
+<h2 class="card-title">Spelling</h2>
+<p class="card-desc">Common tricky spellings, homophones, and spelling patterns tested in 11+ exams.</p>
+</a>
+<a href="punctuation/" class="card punctuation">
+<div class="card-icon">❗</div>
+<h2 class="card-title">Punctuation</h2>
+<p class="card-desc">Commas, apostrophes, speech marks, and punctuation rules for clear written English.</p>
+</a>
+<a href="writing/" class="card writing">
+<div class="card-icon">📝</div>
+<h2 class="card-title">Writing Skills</h2>
+<p class="card-desc">Creative writing tips, story structure, descriptive language, and planning strategies.</p>
+</a>
+</div>
+<footer>
+<p class="copyright">© 2026 Kharadi Enterprise Ltd. (Teknowlogia Lab)</p>
+</footer>
+</div>
 </body>
-  </html>
 </html>
