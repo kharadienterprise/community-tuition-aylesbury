@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maths – 11+ Learning Resources</title>
+  <title>Maths – Fractions</title>
   <style>
+    /* You can reuse the same CSS as index.html
+       or move shared CSS into a separate file later */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -55,53 +57,60 @@
       transform: translateY(-8px);
       box-shadow: 0 12px 30px rgba(0,0,0,0.2);
     }
-    .card.flashcards { border-color: #27ae60; }
-    .card.worksheets { border-color: #e67e22; }
-    .card.practice { border-color: #3498db; }
-    .card.exams { border-color: #9b59b6; }
+
+    .flashcards { border-color: #27ae60; }
+    .worksheets { border-color: #e67e22; }
+    .practice   { border-color: #3498db; }
+    .exams      { border-color: #9b59b6; }
+
     .card-icon { font-size: 2.5rem; margin-bottom: 12px; }
     .card h2 { font-size: 1.3rem; margin-bottom: 8px; }
-    .card.flashcards h2 { color: #27ae60; }
-    .card.worksheets h2 { color: #e67e22; }
-    .card.practice h2 { color: #3498db; }
-    .card.exams h2 { color: #9b59b6; }
     .card p { color: #888; font-size: 0.9rem; line-height: 1.5; }
+
     footer {
       text-align: center;
       margin-top: 40px;
       padding-top: 20px;
       border-top: 1px solid rgba(255,255,255,0.2);
     }
-    footer .copyright { color: rgba(255,255,255,0.7); font-size: 0.85rem; }
+    footer .copyright {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.85rem;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <a href="index.html" class="back-link">← Back to Home</a>
-    <h1>Maths</h1>
-    <p class="subtitle">Build strong foundations across all areas of 11+ Maths</p>
+    <a href="../index.html" class="back-link">← Back to Maths topics</a>
+    <h1>Fractions & Decimals</h1>
+    <p class="subtitle">Pick a learning method for Fractions & Decimals</p>
+
     <div class="cards-grid">
-      <a href="maths-flashcards/general/" class="card flashcards">
+      <a href="./flashcards/" class="card flashcards">
         <div class="card-icon">🃏</div>
         <h2>Flashcards</h2>
-        <p>Algebra, Fractions, Ratios, Measures, Squares & Cubes, Times Tables and more</p>
+        <p>Quick-fire fraction facts, equivalence, and operations</p>
       </a>
-      <a href="#worksheets" class="card worksheets">
+
+      <a href="../worksheets/maths/fractions/" class="card worksheets">
         <div class="card-icon">📝</div>
         <h2>Worksheets</h2>
-        <p>Downloadable practice sheets for every topic</p>
+        <p>Downloadable fraction practice sheets with answers</p>
       </a>
-      <a href="#practice" class="card practice">
+
+      <a href="../practice/maths/fractions/" class="card practice">
         <div class="card-icon">✏️</div>
         <h2>Practice</h2>
-        <p>Online exercises and interactive quizzes</p>
+        <p>Interactive fraction questions and auto-marked quizzes</p>
       </a>
-      <a href="#exams" class="card exams">
+
+      <a href="../exams/maths/fractions/" class="card exams">
         <div class="card-icon">📄</div>
         <h2>Exam Papers</h2>
-        <p>Full past papers and mock tests</p>
+        <p>Exam-style questions focused on fractions and decimals</p>
       </a>
     </div>
+
     <footer>
       <p class="copyright">© 2026 Kharadi Enterprise Ltd. (Teknowlogia Lab)</p>
     </footer>
