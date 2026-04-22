@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11+ Question of the Day - Community Tuition Aylesbury</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+        }
+        header h1 {
+            color: #667eea;
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        #dateDisplay {
+            color: #888;
+            font-size: 16px;
+        }
+        .quiz-info {
+            background: #f0f4ff;
+            border-radius: 12px;
+            padding: 15px 20px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .quiz-info p {
+            color: #444;
+            font-size: 15px;
+        }
+        .quiz-info strong {
+            color: #667eea;
+        }
+        .question-card {
+            background: #fff;
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+        .question-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 15px rgba(102,126,234,0.2);
+        }
+        .question-card.correct {
+            border-color: #28a745;
+            background: #f0fff4;
+        }
+        .question-card.incorrect {
+            border-color: #dc3545;
+            background: #fff5f5;
+        }
+        .q-num {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+        .q-text {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .options {
+            display: grid;
+            gap: 10px;
+        }
+        .option-label {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .option-label:hover {
+            border-color: #667eea;
+            background: #f8f9ff;
+        }
+        .option-label input {
+            margin-right: 12px;
+            width: 18px;
+            height: 18px;
+            accent-color: #667eea;
+        }
+        .option-label span {
+            font-size: 15px;
+            color: #444;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: transform 0.2s;
+        }
+        .submit-btn:hover {
+            transform: translateY(-2px);
+        }
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .result-box {
+            margin-top: 25px;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            display: none;
+        }
+        .result-box.success {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+        }
+        .result-box.average {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+        .result-box.needs-work {
+            background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
+            color: white;
+        }
+        .result-box h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .result-box p {
+            font-size: 18px;
+            opacity: 0.95;
+        }
+        .answer-key {
+            margin-top: 30px;
+            display: none;
+        }
+        .answer-key h3 {
+            color: #667eea;
+            font-size: 18px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .answer-item {
+            padding: 12px 16px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .answer-item.correct-answer {
+            background: #e8f5e9;
+            border-left: 4px solid #28a745;
+            color: #1b5e20;
+        }
+        .answer-item.wrong-answer {
+            background: #ffebee;
+            border-left: 4px solid #dc3545;
+            color: #b71c1c;
+        }
+        .answer-item .your-answer {
+            font-weight: bold;
+        }
+        .answer-item .correct-answer-text {
+            font-weight: bold;
+            color: #28a745;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            color: #888;
+            font-size: 14px;
+        }
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: #667eea;
+            font-size: 18px;
+        }
+        .error {
+            text-align: center;
+            padding: 50px;
+            color: #dc3545;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>11+ Question of the Day</h1>
+            <p id="dateDisplay">Loading today's quiz...</p>
+        </header>
+
+        <div id="loading" class="loading">Loading today's quiz... Please wait.</div>
+        <div id="error" class="error" style="display: none;"></div>
+
+        <form id="quizForm">
+            <div id="questions" style="display: none;"></div>
+            <button type="submit" id="submitBtn" class="submit-btn" style="display: none;">Submit Answers</button>
+        </form>
+
+        <div id="resultBox" class="result-box"></div>
+
+        <div id="answerKey" class="answer-key"></div>
+
+        <footer>
+            <p>Community Tuition Aylesbury | Visit daily for new questions!</p>
+        </footer>
+    </div>
+
+    <script>
+        const today = new Date().toISOString().split('T')[0];
+
+        document.getElementById('dateDisplay').textContent = 'Today: ' + new Date().toLocaleDateString('en-GB', {
+            weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+        });
+
+        function loadQuiz() {
+            const jsonPath = './daily-quiz-data.json';
+            fetch(jsonPath)
+                .then(response => {
+                    if (!response.ok) throw new Error('Could not load quiz data');
+                    return response.json();
+                })
+                .then(data => {
+                    const quiz = data.quizzes.find(q => q.date === today) || data.quizzes[0];
+                    if (!quiz) throw new Error('No quiz found');
+                    renderQuiz(quiz);
+                })
+                .catch(err => {
+                    document.getElementById('loading').style.display = 'none';
+                    const errorDiv = document.getElementById('error');
+                    errorDiv.textContent = 'Could not load quiz. Please try again later.';
+                    errorDiv.style.display = 'block';
+                    console.error(err);
+                });
+        }
+
+        function renderQuiz(quiz) {
+            const container = document.getElementById('questions');
+            const todayLabel = quiz.date === today ? ' (Today)' : ' (Archive)';
+            document.getElementById('dateDisplay').textContent = 'Today: ' + new Date().toLocaleDateString('en-GB', {
+                weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+            }) + todayLabel;
+
+            let html = '';
+            quiz.questions.forEach((q, index) => {
+                html += `
+                <div class="question-card" id="card${index}">
+                    <span class="q-num">Question ${index + 1}</span>
+                    <p class="q-text">${q.question}</p>
+                    <div class="options">
+                        ${q.options.map((opt, i) => `
+                        <label class="option-label">
+                            <input type="radio" name="q${index}" value="${i}" required>
+                            <span>${String.fromCharCode(65+i)}) ${opt}</span>
+                        </label>
+                        `).join('')}
+                    </div>
+                </div>
+                `;
+            });
+
+            container.innerHTML = html;
+            container.style.display = 'block';
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('submitBtn').style.display = 'block';
+        }
+
+        function showAnswers(quiz, answers) {
+            const keyDiv = document.getElementById('answerKey');
+            let html = '<h3>Answer Key</h3>';
+            quiz.questions.forEach((q, index) => {
+                const userAns = answers[`q${index}`];
+                const correct = q.correctAnswer;
+                const isCorrect = parseInt(userAns) === correct;
+                const userText = userAns !== undefined ? String.fromCharCode(65+parseInt(userAns)) + ') ' + q.options[parseInt(userAns)] : 'Not answered';
+                const correctText = String.fromCharCode(65+correct) + ') ' + q.options[correct];
+                html += `
+                <div class="answer-item ${isCorrect ? 'correct-answer' : 'wrong-answer'}">
+                    <strong>Q${index+1}:</strong> ${q.question}<br>
+                    <span class="your-answer">Your answer: ${userText}</span><br>
+                    ${!isCorrect ? '<span class="correct-answer-text">Correct answer: ' + correctText + '</span>' : ''}
+                </div>
+                `;
+            });
+            keyDiv.innerHTML = html;
+            keyDiv.style.display = 'block';
+        }
+
+        document.getElementById('quizForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const jsonPath = './daily-quiz-data.json';
+            fetch(jsonPath)
+                .then(response => response.json())
+                .then(data => {
+                    const quiz = data.quizzes.find(q => q.date === today) || data.quizzes[0];
+                    const answers = {};
+                    quiz.questions.forEach((q, index) => {
+                        const selected = document.querySelector(`input[name="q${index}"]:checked`);
+                        if (selected) answers[`q${index}`] = parseInt(selected.value);
+                    });
+                    let score = 0;
+                    quiz.questions.forEach((q, index) => {
+                        if (answers[`q${index}`] === q.correctAnswer) score++;
+                    });
+                    const total = quiz.questions.length;
+                    const percentage = Math.round((score / total) * 100);
+                    const resultBox = document.getElementById('resultBox');
+                    resultBox.style.display = 'block';
+                    resultBox.className = 'result-box';
+                    if (percentage >= 75) {
+                        resultBox.classList.add('success');
+                        resultBox.innerHTML = '<h2>Well done!</h2><p>You scored ' + score + ' out of ' + total + ' (' + percentage + '%)</p><p>Excellent work! Keep it up!</p>';
+                    } else if (percentage >= 50) {
+                        resultBox.classList.add('average');
+                        resultBox.innerHTML = '<h2>Good effort!</h2><p>You scored ' + score + ' out of ' + total + ' (' + percentage + '%)</p><p>Keep practising!</p>';
+                    } else {
+                        resultBox.classList.add('needs-work');
+                        resultBox.innerHTML = '<h2>Keep going!</h2><p>You scored ' + score + ' out of ' + total + ' (' + percentage + '%)</p><p>Don\'t give up - practise makes perfect!</p>';
+                    }
+                    showAnswers(quiz, answers);
+                    document.getElementById('submitBtn').disabled = true;
+                    document.getElementById('submitBtn').textContent = 'Submitted';
+                    const cards = document.querySelectorAll('.question-card');
+                    quiz.questions.forEach((q, index) => {
+                        const userAns = answers[`q${index}`];
+                        if (userAns === q.correctAnswer) {
+                            cards[index].classList.add('correct');
+                        } else {
+                            cards[index].classList.add('incorrect');
+                        }
+                    });
+                });
+        });
+
+        loadQuiz();
+    </script>
+</body>
+</html>
