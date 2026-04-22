@@ -1,0 +1,407 @@
+{
+  "quizzes": [
+    {
+      "date": "2026-04-22",
+      "questions": [
+        {
+          "question": "Which word is closest in meaning to \"rapid\"?",
+          "options": ["slow", "quick", "tired", "loud"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is 7 x 8?",
+          "options": ["54", "56", "58", "64"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "Complete the sequence: apple, banana, cherry, ___",
+          "options": ["date", "grape", "pear", "peach"],
+          "correctAnswer": 0
+        },
+        {
+          "question": "Which shape has 4 equal sides and 4 right angles?",
+          "options": ["triangle", "rectangle", "square", "pentagon"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "Which spelling is correct?",
+          "options": ["definately", "definitely", "definatly", "definetely"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "Choose the synonym for \"brave\".",
+          "options": ["shy", "bold", "weak", "angry"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "If a story says a child was \"delighted\", how did they feel?",
+          "options": ["sad", "bored", "very happy", "confused"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "Which sentence is correct?",
+          "options": ["He don't know.", "He doesn't know.", "He not know.", "He no know."],
+          "correctAnswer": 1
+        }
+      ]
+    },
+    {
+      "date": "2026-04-23",
+      "questions": [
+        {
+          "question": "Which word is the opposite of \"ancient\"?",
+          "options": ["old", "modern", "historic", "classic"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is 144 divided by 12?",
+          "options": ["10", "11", "12", "14"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "Which number comes next: 2, 4, 8, 16, ___?",
+          "options": ["24", "30", "32", "36"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "How many sides does a hexagon have?",
+          "options": ["5", "6", "7", "8"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "Which word means \"a place where books are kept\"?",
+          "options": ["museum", "library", "gallery", "archive"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is the past tense of \"run\"?",
+          "options": ["runned", "ran", "running", "runs"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "If you have 3 apples and buy 5 more, how many do you have?",
+          "options": ["7", "8", "9", "10"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "Which is a noun?",
+          "options": ["quickly", "beautiful", "happiness", "very"],
+          "correctAnswer": 2
+        }
+      ]
+    },
+    {
+      "date": "2026-04-24",
+      "questions": [
+        {
+          "question": "What is the meaning of \"enormous\"?",
+          "options": ["tiny", "huge", "average", "light"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is 9 x 7?",
+          "options": ["56", "63", "72", "81"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "Which letter completes the pattern: A, C, E, G, ___?",
+          "options": ["H", "I", "J", "K"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is the plural of \"child\"?",
+          "options": ["childs", "children", "childes", "childrens"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "Which word is a verb?",
+          "options": ["quickly", "running", "fast", "speed"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is half of 150?",
+          "options": ["65", "70", "75", "80"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "Which word does NOT belong: cat, dog, bird, table?",
+          "options": ["cat", "dog", "bird", "table"],
+          "correctAnswer": 3
+        },
+        {
+          "question": "What is 100 - 37?",
+          "options": ["53", "63", "73", "83"],
+          "correctAnswer": 1
+        }
+      ]
+    },
+    {
+      "date": "2026-04-25",
+      "questions": [
+        {
+          "question": "What is the synonym of \"happy\"?",
+          "options": ["sad", "joyful", "angry", "tired"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is 12 x 12?",
+          "options": ["124", "134", "144", "154"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "Which word means the same as \"start\"?",
+          "options": ["end", "begin", "finish", "stop"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is 25% of 80?",
+          "options": ["15", "20", "25", "30"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "Which is the correct plural of \"mouse\"?",
+          "options": ["mouses", "mice", "mousees", "mices"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "How many minutes are in 2 hours?",
+          "options": ["100", "110", "120", "130"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "Which word is an adjective?",
+          "options": ["run", "quickly", "beautiful", "happily"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "What comes next: 1, 1, 2, 3, 5, ___?",
+          "options": ["7", "8", "9", "10"],
+          "correctAnswer": 1
+        }
+      ]
+    },
+    {
+      "date": "2026-04-26",
+      "questions": [
+        {
+          "question": "What is the opposite of \"heavy\"?",
+          "options": ["thick", "light", "strong", "hard"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is 8 x 9?",
+          "options": ["64", "72", "81", "90"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "Which word completes: hot is to cold as day is to ___?",
+          "options": ["sun", "night", "bright", "dark"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is 200 + 150?",
+          "options": ["300", "350", "400", "450"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "Which word is spelled correctly?",
+          "options": ["recieve", "receive", "receve", "receiv"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "How many degrees in a right angle?",
+          "options": ["45", "60", "90", "180"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "Which is a compound word?",
+          "options": ["running", "sunflower", "quickly", "happiness"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is 45 divided by 5?",
+          "options": ["7", "8", "9", "10"],
+          "correctAnswer": 2
+        }
+      ]
+    },
+    {
+      "date": "2026-04-27",
+      "questions": [
+        {
+          "question": "What is the meaning of \"generous\"?",
+          "options": ["selfish", "kind", "mean", "lazy"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is 6 x 7?",
+          "options": ["36", "42", "48", "54"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "Which number is a prime number?",
+          "options": ["9", "12", "15", "17"],
+          "correctAnswer": 3
+        },
+        {
+          "question": "What is the prefix in \"unhappy\"?",
+          "options": ["un", "happy", "happ", "y"],
+          "correctAnswer": 0
+        },
+        {
+          "question": "Which word means \"to look carefully\"?",
+          "options": ["glance", "stare", "examine", "ignore"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "What is 3 squared?",
+          "options": ["6", "9", "12", "18"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "Which is the superlative of \"good\"?",
+          "options": ["gooder", "better", "best", "goodest"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "How many sides does a triangle have?",
+          "options": ["2", "3", "4", "5"],
+          "correctAnswer": 1
+        }
+      ]
+    },
+    {
+      "date": "2026-04-28",
+      "questions": [
+        {
+          "question": "What is the opposite of \"arrive\"?",
+          "options": ["reach", "depart", "enter", "come"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is 11 x 11?",
+          "options": ["101", "111", "121", "131"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "Which word is a homophone of \"see\"?",
+          "options": ["sea", "look", "view", "watch"],
+          "correctAnswer": 0
+        },
+        {
+          "question": "What is 1000 - 456?",
+          "options": ["534", "544", "554", "564"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "Which word means \"very large\"?",
+          "options": ["tiny", "gigantic", "small", "mini"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is the Roman numeral for 50?",
+          "options": ["V", "X", "L", "C"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "Which sentence is in the past tense?",
+          "options": ["I walk to school.", "I walked to school.", "I will walk.", "I am walking."],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is 15 x 4?",
+          "options": ["50", "55", "60", "65"],
+          "correctAnswer": 2
+        }
+      ]
+    },
+    {
+      "date": "2026-04-29",
+      "questions": [
+        {
+          "question": "What is the meaning of \"fragile\"?",
+          "options": ["strong", "easily broken", "heavy", "thick"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is 13 x 3?",
+          "options": ["36", "39", "42", "45"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "Which word is the past participle of \"write\"?",
+          "options": ["wrote", "written", "writing", "writes"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is the next number: 100, 95, 90, 85, ___?",
+          "options": ["75", "80", "82", "84"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "Which word means \"to make something better\"?",
+          "options": ["worsen", "improve", "destroy", "damage"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "How many centimetres in a metre?",
+          "options": ["10", "50", "100", "1000"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "Which is the comparative of \"big\"?",
+          "options": ["big", "bigger", "biggest", "more big"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is 72 divided by 8?",
+          "options": ["7", "8", "9", "10"],
+          "correctAnswer": 2
+        }
+      ]
+    },
+    {
+      "date": "2026-04-30",
+      "questions": [
+        {
+          "question": "What is the synonym of \"quick\"?",
+          "options": ["slow", "fast", "tired", "lazy"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is 8 x 8?",
+          "options": ["56", "64", "72", "81"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "Which word means \"the study of numbers\"?",
+          "options": ["history", "geography", "mathematics", "science"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "What is 50% of 200?",
+          "options": ["50", "75", "100", "150"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "Which word is an adverb?",
+          "options": ["quick", "quickly", "quickness", "quicken"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "How many hours in a day?",
+          "options": ["12", "20", "24", "48"],
+          "correctAnswer": 2
+        },
+        {
+          "question": "Which word means \"to come together\"?",
+          "options": ["separate", "gather", "divide", "scatter"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "What is 9 x 6?",
+          "options": ["48", "54", "56", "63"],
+          "correctAnswer": 1
+        }
+      ]
+    }
