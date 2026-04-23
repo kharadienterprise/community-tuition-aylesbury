@@ -45,52 +45,52 @@
         }
       ]
     },
-    {
+        {
       "date": "2026-04-23",
       "questions": [
         {
-          "question": "Which word is the opposite of \"ancient\"?",
-          "options": ["old", "modern", "historic", "classic"],
+          "question": "Which word is closest in meaning to \"reluctant\"?",
+          "options": ["eager", "hesitant", "excited", "willing"],
           "correctAnswer": 1
         },
         {
-          "question": "What is 144 divided by 12?",
-          "options": ["10", "11", "12", "14"],
+          "question": "What is 15% of 280?",
+          "options": ["38", "40", "42", "45"],
           "correctAnswer": 2
         },
         {
-          "question": "Which number comes next: 2, 4, 8, 16, ___?",
-          "options": ["24", "30", "32", "36"],
+          "question": "Complete the pattern: 3, 7, 15, 31, ___?",
+          "options": ["55", "59", "63", "67"],
           "correctAnswer": 2
         },
         {
-          "question": "How many sides does a hexagon have?",
-          "options": ["5", "6", "7", "8"],
-          "correctAnswer": 1
-        },
-        {
-          "question": "Which word means \"a place where books are kept\"?",
-          "options": ["museum", "library", "gallery", "archive"],
-          "correctAnswer": 1
-        },
-        {
-          "question": "What is the past tense of \"run\"?",
-          "options": ["runned", "ran", "running", "runs"],
-          "correctAnswer": 1
-        },
-        {
-          "question": "If you have 3 apples and buy 5 more, how many do you have?",
-          "options": ["7", "8", "9", "10"],
-          "correctAnswer": 1
-        },
-        {
-          "question": "Which is a noun?",
-          "options": ["quickly", "beautiful", "happiness", "very"],
+          "question": "Which sentence is grammatically correct?",
+          "options": ["She don't like apples.", "She doesn't likes apples.", "She doesn't like apples.", "She not like apples."],
           "correctAnswer": 2
+        },
+        {
+          "question": "What does \"benevolent\" mean?",
+          "options": ["cruel", "kind", "angry", "selfish"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "Simplify the fraction 36/48",
+          "options": ["2/3", "3/4", "4/5", "5/6"],
+          "correctAnswer": 1
+        },
+        {
+          "question": "Pen is to Write as Scissors is to ___?",
+          "options": ["cut", "sharp", "metal", "paper"],
+          "correctAnswer": 0
+        },
+        {
+          "question": "Which spelling is correct?",
+          "options": ["neccessary", "necessary", "necesssary", "necesary"],
+          "correctAnswer": 1
         }
       ]
     },
-    {
+{
       "date": "2026-04-24",
       "questions": [
         {
