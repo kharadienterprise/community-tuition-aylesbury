@@ -249,7 +249,7 @@
         });
 
         function loadQuiz() {
-            const jsonPath = './daily-quiz-data.json';
+                  const jsonPath = './daily-quiz-data.json?v=' + Date.now();
             fetch(jsonPath)
                 .then(response => {
                     if (!response.ok) throw new Error('Could not load quiz data');
